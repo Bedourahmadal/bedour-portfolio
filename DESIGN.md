@@ -1,186 +1,200 @@
-# Integrated Biosciences — Style Reference
-> bioluminescent laboratory at midnight
+# Sequence — Style Reference
+> blueprint paper with violet annotations. A near-white editorial surface where everything is grayscale and one precise violet pulse marks every action worth taking.
 
-**Theme:** mixed
+**Theme:** light
 
-Integrated Biosciences operates in a darkroom-laboratory visual language: a near-black canvas with cool green undertones, restrained white typography, and a single bioluminescent lime accent that activates only on small interactive elements like arrow buttons, tag dots, and progress indicators. The entire type system runs on a single weight of Aspekta — hierarchy is sculpted purely through size and aggressive negative letter-spacing, which makes 111px and 158px display lines feel architectural rather than decorative. Roboto Mono is reserved for technical labels, nav items, and metadata, reinforcing the instrumentation-bench character of the brand. Surfaces stay mostly flat — no shadows, no gradients — with thin hairline borders in #c9cbbe or #4d5757 doing all the delineation. Light sections flip to a warm off-white canvas (#f7f7f5) with white cards, but the green accent persists as a constant biological signal.
+Sequence reads like an editorial finance publication rendered in product form: a near-white canvas, a humanist sans (TWK Lausanne) carrying almost all interface text, and a light-weight serif (Moderat Serif) used sparingly on large display headlines to inject editorial gravity. Depth comes from hairline borders and thin layered shadows, not heavy panels or colored fills. A single vivid violet (#a565ff) is the only chromatic accent in the system — it functions as a precise annotation, appearing on primary CTAs, active icons, and subtle brand glows, while the rest of the interface stays in cool grays. Soft blue-violet radial washes in hero and section backgrounds create atmospheric depth without committing to color, and the overall density is compact and precise rather than spacious or airy.
 
 ## Colors
 
 | Name | Value | Role |
 |------|-------|------|
-| Bioluminescent Lime | `#cef79e` | Green wash for highlight backgrounds, decorative bands, and soft emphasis behind content |
-| Abyssal Ink | `#222f30` | Primary text, borders, dark canvas sections, nav backgrounds. Near-black with a cool green undertone — it is not pure black, it carries the same green note as the accent. Darkest content surface |
-| Bone White | `#f7f7f5` | Light-section page canvas, hero/section backgrounds when in light mode. Warm off-white with the faintest cream cast |
-| Paper | `#ffffff` | Card surfaces on light sections, elevated containers, icon fills, body text on dark surfaces. The brightest surface in the system |
-| Graphite | `#4d5757` | Secondary body text, muted metadata, subdued borders, ghost button outlines. Mid-tone with a green undertone matching the system |
-| Lichen | `#c9cbbe` | Hairline borders, subtle dividers, placeholder metadata text. Warm desaturated green-beige that disappears on white but is visible on #f7f7f5 |
-| Tissue | `#e7e8e1` | Alternate card surface — warmer light gray used to differentiate secondary cards or muted content blocks from the white primary surface |
-| Frost | `#eeeeee` | Neutral light card surface when a non-warm alternate is needed |
-| Void | `#000000` | Footer background, pure black anchors. Used sparingly as a true neutral when the Abyssal Ink is too colored |
+| Violet Pulse | `#a565ff` | Primary CTAs, active icons, brand glow accents — the single chromatic accent in the system; everything else defers to it |
+| Indigo Ink | `#5e5cff` | Link text, secondary text emphasis, and accent strokes where violet would be too loud |
+| Lavender Wash | `#ebebff` | Soft tinted backgrounds for highlighted callouts and subtle surface differentiation |
+| Iris Glow | `#e0c9ff` | Violet supporting accent for decorative details and low-frequency emphasis. Do not promote it to the primary CTA color |
+| Ledger Green | `#2e7317` | Green text accent for links, tags, and emphasized short phrases. Use as a supporting accent, not as a status color |
+| Paper White | `#ffffff` | Primary canvas, card surfaces, button fills, and elevated surface layer |
+| Bone | `#f7f7f7` | Recessed card surfaces and subtle panel backgrounds one step off white |
+| Fog | `#f1f1f1` | Disabled surface fills, table row alternates, and recessed UI regions |
+| Silver | `#efefef` | Inset borders, button outlines, and shadow-stack fills for elevation |
+| Marble | `#fff6df` | Warm cream accent for announcement bars and subtle highlight bands |
+| Graphite | `#1d1d20` | Primary heading and body text — near-black with a barely-warm tint |
+| Slate | `#42424a` | Secondary headings, emphasized body text, and list accents |
+| Iron | `#505050` | Default body text and the most-used text color across the system |
+| Steel | `#757575` | Muted helper text, navigation labels, and secondary table text |
+| Smoke | `#92939e` | Placeholder text, disabled labels, and tertiary table cells |
+| Ash | `#e5e7eb` | Default hairline border — the structural backbone of the entire UI; the most-used color in the system |
+| Mist | `#d1d9e4` | Cooler border for inputs, dividers, and sections needing visual separation from Ash |
+| Olive Gray | `#808076` | SVG illustration stroke and fill — the default for vector graphics in content |
+| Noir | `#000000` | Icon fills and contrast anchors where pure black is required |
 
 ## Typography
 
-### Aspekta — Sole display and body typeface. Every size from caption to display runs on a single 400 weight — hierarchy is carved by size and tightening tracking, never by weight. Negative letter-spacing scales linearly with size: -0.001em at body, -0.03em at the largest display, keeping the letterforms optically balanced as they grow. The flat single-weight treatment gives the brand its lab-instrument calm — no bold shouting, no italic emotion.
-- **Substitute:** Inter Tight at weight 400, or Söhne Buch
-- **Weights:** 400
-- **Sizes:** 16px, 18px, 19px, 22px, 24px, 36px, 42px, 58px, 75px, 89px, 111px, 158px
-- **Line height:** 1.00–1.30
-- **Letter spacing:** -0.03em at 158px, -0.02em at 89–111px, -0.006em at 36–42px, -0.001em at 16–19px
+### TWK Lausanne — Primary UI typeface — all body text, navigation, buttons, labels, and most headings from 8px to 24px. A humanist sans with open apertures that stays legible at 10–12px in dense tables and form chrome.
+- **Substitute:** Inter, IBM Plex Sans, or Söhne
+- **Weights:** 300, 400, 500, 600, 700
+- **Sizes:** 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 24
+- **Line height:** 1.00–2.00 (body 1.50–1.60, tight 1.00–1.20 for compact UI)
+- **Letter spacing:** -0.003em at display sizes, -0.002em at subhead sizes, normal at body
 
-### Roboto Mono — Technical labels, nav items, section markers (01/02 counters), tags, publication metadata, button text. Monospaced geometry signals instrumentation and scientific precision — it is the voice of the lab notebook, contrasted against Aspekta's editorial clarity.
-- **Substitute:** JetBrains Mono, IBM Plex Mono
+### Moderat Serif — Editorial display serif used only on the largest marketing headlines (h1). Light weight at 40–46px with aggressive -0.025em tracking — the contrast against the humanist sans signals premium editorial tone and breaks the product-UI pattern.
+- **Substitute:** GT Sectra, Tiempos Headline, or Canela
+- **Weights:** 300, 400
+- **Sizes:** 40, 46
+- **Line height:** 1.00
+- **Letter spacing:** -0.0250em
+
+### SF Mono — Monospaced micro-text for API references, code snippets, and technical annotations at 10px. Rare and deliberate — appears only where machine-readable content is shown.
+- **Substitute:** JetBrains Mono or IBM Plex Mono
 - **Weights:** 400
-- **Sizes:** 13px, 14px, 15px
-- **Line height:** 1.00–1.23
-- **Letter spacing:** -0.02em at 13px, -0.008em at 14px, -0.007em at 15px
+- **Sizes:** 10
+- **Line height:** 1.50–1.80
 
 ### Type Scale
 
 | Role | Size | Line Height | Letter Spacing |
 |------|------|-------------|----------------|
-| caption | 13px | 1.23 | -0.26px |
-| body | 18px | 1.3 | -0.018px |
-| body-lg | 22px | 1.3 | -0.13px |
-| subheading | 24px | 1.2 | -0.14px |
-| heading-sm | 36px | 1.2 | -0.22px |
-| heading-lg | 58px | 1.1 | -0.7px |
-| display | 75px | 1.1 | -1.5px |
-| display-lg | 89px | 1.1 | -1.78px |
-| display-xl | 111px | 1 | -2.22px |
-| hero | 158px | 1 | -4.74px |
+| caption | 11px | 1.45 | -0.022px |
+| body | 14px | 1.57 | — |
+| body-lg | 16px | 1.63 | — |
+| subheading | 18px | 1.56 | — |
+| heading-sm | 24px | 1.33 | -0.048px |
+| heading | 40px | 1 | -1px |
+| display | 46px | 1 | -1.15px |
 
 ## Spacing & Layout
 
 **Base unit:** 4px
 
-**Density:** comfortable
+**Density:** compact
 
 - **Page max-width:** 1200px
-- **Section gap:** 80-120px
-- **Card padding:** 40px
-- **Element gap:** 8-20px
+- **Section gap:** 80px
+- **Card padding:** 24px
+- **Element gap:** 8px
 
 ### Border Radius
 
-- **nav:** 12px
-- **tags:** 9999px
-- **cards:** 16-20px
-- **buttons:** 8px
-- **largeCards:** 40px
+- **cards:** 8px
+- **badges:** 9999px
+- **inputs:** 4px
+- **buttons:** 9999px
+- **large-panels:** 16px
 
 ## Components
 
-### Hero Display Headline
-**Role:** Primary page-level headline
+### Primary Action Button
+**Role:** Filled CTA for the single most important action on any screen
 
-Set in Aspekta 400 at 111–158px, line-height 1.0, letter-spacing -0.03em. White (#ffffff) on Abyssal Ink (#222f30). Left-aligned, no max-width constraint — the line breaks are generous. Period-terminated. This is the single largest typographic element in the system and sets the brand's architectural tone.
+Background #a565ff, text #ffffff, border-radius 9999px (pill), padding 10px 20px. TWK Lausanne 14px weight 500. Gains a violet halo via box-shadow using #e0c9ff at low opacity. This is the only filled chromatic button in the system.
 
-### Section Sub-Headline
-**Role:** Section-level statement
+### Secondary Action Button
+**Role:** Outlined or ghost action when two actions appear on one screen
 
-Aspekta 400 at 36–42px, line-height 1.2, letter-spacing -0.006em. Rendered in muted Graphite (#4d5757) on dark backgrounds, or Abyssal Ink on light. Reads as a quiet, reflective counterpoint to the hero — the voice of the researcher explaining, not announcing.
+Background transparent or #ffffff, border 1px #efefef, text #1d1d20, border-radius 9999px, padding 10px 20px. Hover lifts to #f7f7f7 background. Layered shadow: rgba(58,58,64,0.1) 0 0 0 1px + rgba(0,0,0,0.1) 0 1px 3px 0.
 
-### Pill Navigation Button
-**Role:** Active/highlighted nav item
+### Navigation Link
+**Role:** Top-level nav items and inline text links
 
-Outlined pill shape, border 1px in #c9cbbe on dark surfaces or #4d5757 on light, radius 12px. Roboto Mono 13–14px at 400, letter-spacing -0.02em. Text in matching border color. When active, fills with Bioluminescent Lime (#cef79e) and text flips to Abyssal Ink.
+Text #505050 weight 500 at 14px, no underline. Active state shifts to #1d1d20 and may carry a 1px #1d1d20 underline. Hover transitions to #1d1d20.
 
-### Filled Action Button (Work With Us)
-**Role:** Primary site-level CTA
+### Display Headline Block
+**Role:** Hero h1 and section-opening headlines
 
-Filled rectangle, background #222f30 (dark) or #ffffff (light), text in opposite surface color. No border. Radius 8px. Roboto Mono 13–14px uppercase tracking -0.02em. Compact horizontal padding ~12-16px, vertical 8px. Restrained size — this system does not shout with button scale.
+Moderat Serif weight 300 at 46px, line-height 1.00, letter-spacing -0.025em (-1.15px). Color #1d1d20. Centered or left-aligned, always followed by a TWK Lausanne body paragraph at 16px weight 400 in #505050.
 
-### Arrow CTA Button
-**Role:** Secondary directional action
+### Product Feature Card
+**Role:** Cards in the product suite grid and feature sections
 
-40×40px square, radius 8px, filled Bioluminescent Lime (#cef79e) with Abyssal Ink arrow icon. Used at the end of card titles, section footers, and inline links. This is the only place the green accent fills a shape — it functions as a green traffic light pointing forward.
+Background #ffffff, border 1px #e5e7eb, border-radius 8px, padding 24px. Icon at 24px in #1d1d20 sits top-left. Title in TWK Lausanne 18px weight 500 #1d1d20. Description in 14px weight 400 #757575. No shadow on resting state.
 
-### Outlined Ghost Button (Discover Our Platform)
-**Role:** Low-emphasis CTA
+### Product Screenshot Card
+**Role:** Faux product UI cards floating in the hero
 
-Transparent background, border 1px in #4d5757, text in #ffffff or #222f30. Radius 8px. Roboto Mono 14px. Pairs with the Arrow CTA button when two actions sit side by side.
+Background #ffffff, border 1px #e5e7eb, border-radius 8px, padding 16px. Uses the layered shadow stack: rgba(58,58,64,0.1) 0 0 0 1px + rgba(0,0,0,0.1) 0 1px 3px 0 + rgba(0,0,0,0.1) 0 1px 2px -1px. Internal mock chrome uses #f7f7f7 fills and #ebebff tints for active fields.
 
-### Section Counter (01/02)
-**Role:** Section numbering marker
+### Input Field
+**Role:** Form inputs, search fields, and inline editors
 
-Small pill containing a section number, border 1px in #4d5757, radius 9999px. Roboto Mono 13px. Sits above or beside the section headline as a navigational anchor — the table-of-contents voice of the page.
+Background #ffffff, border 1px #d1d9e4, border-radius 4px, padding 8px 12px. TWK Lausanne 14px weight 400. Placeholder text in #92939e. Focus state shifts border to #a565ff with 2px outer ring of #ebebff.
 
-### News Article Card
-**Role:** Editorial content block
+### Integration Logo Tile
+**Role:** Third-party brand logos in the integration grid
 
-White (#ffffff) surface on Bone White (#f7f7f5) canvas, radius 20–40px, no shadow. 40px internal padding. Two-column layout: left half is a dark full-bleed scientific image (radius 12-16px on the image itself), right half is title + meta + excerpt + 'READ ARTICLE' link. Generous breathing room — this card occupies a full viewport-width band.
+Background #ffffff, border 1px #e5e7eb, border-radius 8px, padding 16px. Logo mark centered, no accompanying text. Renders at roughly 48–64px square within the tile.
 
-### Publication Tag
-**Role:** Category indicator
+### Status Badge
+**Role:** Inline status indicators (Sent, Scheduled, Approved)
 
-Small green-dot prefix + Roboto Mono uppercase label. Dot is 6px Bioluminescent Lime circle. Label in Roboto Mono 13px in #4d5757 or #c9cbbe. Functions as the system's only color-coded classification marker.
+Background #ebebff or #f7f7f7, text #5e5cff or #2e7317 weight 500 at 11px, border-radius 9999px, padding 2px 10px. Success variant uses #2e7317 text on #f7f7f7 background.
 
-### Hero Section Background
-**Role:** Dark canvas surface
+### Announcement Bar
+**Role:** Top-of-page promotional strip
 
-Full-bleed Abyssal Ink (#222f30). No gradient, no texture. Headline left-aligned in upper third, supporting text left-aligned in lower third. Massive vertical breathing room — minimum 400px of negative space between headline and copy.
+Background #fff6df, text #1d1d20 weight 400 at 13px, centered. Full-bleed, padding 8px vertical. Arrow link in #5e5cff.
 
-### Light Section Background
-**Role:** Light canvas surface
+### Logo Lockup
+**Role:** Brand mark + wordmark in nav and footer
 
-Full-bleed Bone White (#f7f7f5) with white cards. Used for editorial/newsroom sections, creating a flip from the dark content sections. The transition itself is the visual signal — no divider line is needed.
+Hex-cluster glyph in #1d1d20 followed by 'Sequence' in TWK Lausanne weight 500 at 18px, letter-spacing -0.002em. No tagline.
 
-### Hairline Divider
-**Role:** Section/content separator
+### Section Header
+**Role:** Eyebrow label + h2 combination introducing each section
 
-1px line in #c9cbbe (on light) or #4d5757 (on dark). Full width or column-width. The system uses only horizontal dividers — never vertical, never double, never dashed.
+Eyebrow in TWK Lausanne 12px weight 500 #757575 uppercase or sentence-case, optional 4px row-gap. h2 in TWK Lausanne 40px weight 300 #1d1d20 line-height 1.00. Centered stack pattern in hero, left-aligned in product sections.
 
-### Footer
-**Role:** Site closure
+### Customer Logo Strip
+**Role:** Row of customer wordmarks for social proof
 
-Pure black (#000000) background — a deeper note than the Abyssal Ink used in content sections. White text, Roboto Mono for links, Aspekta for any larger text. Signals the absolute end of the site.
+No background or border. Wordmarks in #1d1d20 at consistent visual weight, spaced with 48–80px column-gap. Centered horizontally with star rating above at 14px in #757575.
 
 ## Do's and Don'ts
 
 ### Do
-- Use Aspekta at weight 400 for all display and body text — never bold, never semibold, never italic. Hierarchy is size and tracking only.
-- Set Bioluminescent Lime (#cef79e) fills at exactly 40×40px for arrow buttons and 6px diameter for tag dots. Never scale the accent larger than a micro-surface.
-- Apply letter-spacing proportionally: -0.03em at 158px, -0.02em at 89–111px, -0.006em at 36–42px, -0.001em at 16–19px. The tracking is what keeps the flat weight readable at extreme sizes.
-- Use 1px hairlines in #c9cbbe (on light) or #4d5757 (on dark) for all dividers and card borders. Never use thicker borders, never use shadows for depth.
-- Reserve Roboto Mono for nav items, section counters (01/02), publication tags, dates, and button text. Never use it for headlines or body copy longer than a label.
-- Maintain 80–120px vertical section gaps. The system breathes — compression destroys the lab-instrument calm.
-- Pair every action with its opposite surface: dark button (#222f30 fill) on light canvas, light button (#ffffff fill) on dark canvas. Never use Bioluminescent Lime as a primary button background.
+- Use Violet Pulse (#a565ff) exclusively for the single primary CTA per screen; never for body text, icons in resting state, or large fills
+- Set all headings 24px and above in TWK Lausanne weight 300; reserve Moderat Serif for the 40–46px display headline only
+- Use Ash (#e5e7eb) 1px as the default border across cards, dividers, inputs, and tiles — this is the structural line of the system
+- Apply the pill radius (9999px) to all buttons, nav items, and tags; use 8px for cards and 4px for inputs and small interactive elements
+- Anchor every section to a white or near-white surface; let depth come from hairline borders and the layered shadow stack, not colored fills
+- Pair Lavender Wash (#ebebff) with Iris Glow (#e0c9ff) when building tinted callouts or highlighted states — never use them as large surface fills
+- Keep section gaps at 80px and card padding at 24px; drop to 16px padding only in dense grid cells or product chrome
 
 ### Don't
-- Do not introduce a second weight of Aspekta or any other sans-serif for headings. The single-weight system is the brand's identity — adding bold breaks it.
-- Do not use #cef79 as a background for body text, large surfaces, gradients, or hero overlays. The accent is rationed at micro-scale for a reason.
-- Do not apply box-shadows, drop-shadows, or any elevation effect. Depth comes from color contrast and borders only.
-- Do not use pure #000000 for content sections — reserve it for the footer. Content dark surfaces are #222f30 with its green undertone.
-- Do not use the warm neutrals (#e7e8e1, #c9cbbe) on dark sections. They disappear against Abyssal Ink and break the surface hierarchy.
-- Do not place images outside of rounded containers (minimum radius 12px) or without the dark scientific treatment. Lifestyle photography breaks the lab-instrument language.
-- Do not use multiple accent colors. The system's power is in monochrome discipline plus one signal. Adding a second chromatic role dilutes the brand's visual tension.
+- Don't introduce any new chromatic color — the system is monochrome grays plus exactly one violet accent and one green semantic
+- Don't use Moderat Serif below 40px or for anything other than the h1 display headline; it will lose its editorial weight
+- Don't apply colored backgrounds to large content regions; atmospheric depth comes from the soft blue-violet radial gradient washes, not solid color
+- Don't use heavy drop shadows; the system relies on thin 1px rings and tightly-clamped offset shadows, never blurry elevation blobs
+- Don't set body text below 12px; the smallest TWK Lausanne size for any user-facing text is 12px, with 14px as the comfortable default
+- Don't use Indigo Ink (#5e5cff) as a button background — it is a link and secondary-text color, not an action fill
+- Don't round buttons or tags with 8px; they must be pills (9999px) to maintain the contrast against the 8px card radius
 
 ## Elevation
 
-This system is deliberately flat. No box-shadows appear anywhere. Depth is communicated exclusively through surface color contrast (Abyssal Ink vs Paper vs Bone White) and border hairlines. The visual philosophy treats the interface as a printed scientific poster — every element is a flat ink shape on a flat surface, and the hierarchy comes from size, color, and spacing rather than from any sense of floating or lifting.
+- **Primary CTA button:** `0px 0px 0px 1px rgba(58,58,64,0.1), 0px 1px 3px 0px rgba(0,0,0,0.1), 0px 1px 2px -1px rgba(0,0,0,0.1) + violet halo via #e0c9ff at ~20% opacity 0 0 8px 2px`
+- **Product screenshot cards:** `0px 0px 0px 2px rgb(239,239,239), 0px 22px 9px 0px rgba(0,0,0,0.01), 0px 12px 7px 0px rgba(0,0,0,0.04), 0px 5px 5px 0px rgba(0,0,0,0.06), 0px 1px 3px 0px rgba(0,0,0,0.07)`
+- **Secondary/outlined button:** `0px 0px 0px 1px rgba(29,29,32,0.08)`
+- **Subtle elevation ring:** `0px 0px 0px 1px rgba(0,0,0,0.05)`
 
 ## Surfaces
 
-- **Page Canvas — Light** (`#f7f7f5`) — Base background for light sections (Newsroom, editorial)
-- **Page Canvas — Dark** (`#222f30`) — Base background for dark sections (Hero, What We Do, content)
-- **Card Surface — Light** (`#ffffff`) — Elevated cards on light canvas, icon fills on dark
-- **Card Surface — Warm Alternate** (`#e7e8e1`) — Secondary card tone on light sections
-- **Accent Fill** (`#cef79`) — Interactive micro-surfaces — arrow buttons, active tags, accent dots
-- **Footer Ground** (`#000000`) — Absolute-dark closure surface
+- **Page Canvas** (`#ffffff`) — Base page background, hero and section backgrounds
+- **Recessed Surface** (`#f7f7f7`) — Card and panel surfaces sitting one step below the canvas
+- **Tinted Surface** (`#ebebff`) — Lavender-tinted highlight regions for special content blocks
+- **Warm Accent** (`#fff6df`) — Cream announcement bar and warm highlight bands
 
 ## Imagery
 
-Scientific microscopy and 3D molecular renders dominate — cell clusters, protein structures, and neural networks rendered in a single dark-green-to-black palette so they integrate with the Abyssal Ink canvas. Photography is not used; all imagery is generated or illustrated. Imagery is always contained within rounded rectangles (radius 12–16px) and paired with white cards. The green Bioluminescent Lime is echoed in the imagery's highlights, creating visual continuity between the interface accent and the scientific subject matter. The Newsroom section's lead image is a tight crop of glowing cell structures on black — full-bleed within the card, with no text overlay, letting the subject speak.
+Imagery is restrained and product-centric: no lifestyle photography, no stock imagery, no decorative illustrations. The visual content is almost entirely UI mockups — floating product screenshot cards showing contract interfaces, billing forms, and invoice tables rendered in the same TWK Lausanne / grayscale palette as the rest of the site. Integration logos appear as small monochrome wordmarks inside bordered tiles. A subtle concentric-circle diagram appears once in the product suite section as a structural diagram in #e5e7eb strokes. The hero uses a soft blue-violet radial gradient wash (radial-gradient with rgba(186,217,249,0.8) and rgba(234,234,255,0.8)) as background atmosphere rather than any photographic content. Icons are 1.5–2px stroke, line-style, monochrome in #1d1d20 or #505050 — the only colored icon usage is the Violet Pulse active state.
 
 ## Layout
 
-Max-width 1200px centered for all content. Dark sections (hero, 'What We Do', platform) are full-bleed in Abyssal Ink with content constrained to the 1200px column and generous left-padding for text. Light sections (Newsroom) are full-bleed in Bone White with the same 1200px content column. Hero is asymmetric: headline occupies the left two-thirds, large amounts of right-side and bottom negative space. Section rhythm alternates: dark band → dark band → light band, with no dividers between same-mode sections. Card layouts are two-column (image-left, text-right) for editorial blocks, and single-column stacked for text-heavy content. Navigation is a single horizontal bar — logo left, nav links right, with a pill-shaped active indicator. No sticky header, no sidebar, no mega-menu — the navigation is intentionally minimal so the content commands attention.
+Max-width 1200px centered container with 24px gutter. The page is built as a vertical stack of distinct sections separated by 80px gaps, with a thin #e5e7eb hairline divider between some sections. The hero opens full-bleed white with a centered headline stack (eyebrow → serif display → paragraph → CTA pair) and product screenshot cards floating below as a 3-column grid with slight stagger. The social-proof strip is a single horizontal row of customer wordmarks, centered, with a 5-star rating above. Product suite sections use a left-aligned text column beside a right-side visual column, alternating sides. A 2-column feature section uses a diagram on one side and a 2×3 icon+text grid on the other. Navigation is a single fixed top bar: logo left, product/customer/docs/pricing/resources center-left, sign-in and Book demo button right — the demo button is the only filled violet element in the chrome. No sidebar, no mega-menu, no sticky scroll behavior beyond the nav.
 
 ## Similar Brands
 
-- **Arc Institute** — Dark green-black canvas with single vivid accent, oversized single-weight display type, biotech/scientific instrumentation aesthetic
-- **Chai Discovery** — Near-black backgrounds, bioluminescent accent color, flat minimal surfaces, single-weight large display typography in a bio/AI context
-- **EvolutionaryScale** — Dark-mode biotech interface, extreme type-size contrast between tiny mono labels and massive sans-serif display lines, hairline borders, single accent color
-- **Notion AI landing pages** — Oversized single-weight display headlines, generous negative space, muted secondary text color, minimal surface decoration
-- **Linear** — Dark canvas with hairline borders, single accent color used sparingly on interactive elements, mono labels for technical metadata
+- **Linear** — Same near-monochrome light canvas with a single vivid accent and editorial restraint; both use hairline borders and compact density to feel precise rather than decorative
+- **Stripe** — Similar quiet light-mode product chrome with one chromatic brand color used surgically; both use layered subtle shadows and pill buttons for primary actions
+- **Mercury** — Same financial-product confidence expressed through generous whitespace, editorial sans typography, and violet/purple accent appearing only on primary actions
+- **Vercel** — Both use a near-white canvas with hairline #e5e7eb borders as the dominant structural element, and rely on a single brand color rather than multi-color palettes
+- **Notion** — Same light-dominant interface with muted gray text hierarchy and pill-shaped interactive controls; both treat color as functional punctuation rather than decoration

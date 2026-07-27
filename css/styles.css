@@ -178,12 +178,21 @@ html[dir="rtl"] .arrow-cta svg { transform: scaleX(-1); }
 /* ============================================================
    HERO (centered editorial stack + soft violet wash)
    ============================================================ */
-.hero { position: relative; overflow: hidden; background: var(--white); text-align: center; }
+.hero { position: relative; overflow: hidden; background: var(--white); text-align: center; min-height: 90vh; }
 .hero::before {
-  content: ""; position: absolute; inset: -20% 0 auto 0; height: 860px; pointer-events: none; z-index: 0;
-  background: radial-gradient(58% 55% at 50% 18%, rgba(255,206,158,0.5), rgba(255,239,224,0.65) 45%, transparent 72%);
+  content: ""; position: absolute; inset: -20% 0 auto 0; height: 760px; pointer-events: none; z-index: 0;
+  background: radial-gradient(58% 55% at 50% 16%, rgba(255,206,158,0.5), rgba(255,239,224,0.6) 45%, transparent 72%);
 }
-.hero-inner { position: relative; z-index: 1; max-width: var(--max-width); margin: 0 auto; padding: 96px var(--gutter) 88px; }
+/* Hero background scene — transparent product shot anchored to the bottom, softly faded */
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: url('../images/hero-bg.webp') no-repeat bottom center;
+  background-size: min(1120px, 94%) auto;
+  opacity: 0.55;
+  -webkit-mask-image: linear-gradient(to top, #000 42%, rgba(0,0,0,0.25) 72%, transparent 96%);
+          mask-image: linear-gradient(to top, #000 42%, rgba(0,0,0,0.25) 72%, transparent 96%);
+}
+.hero-inner { position: relative; z-index: 1; max-width: var(--max-width); margin: 0 auto; padding: 84px var(--gutter) 300px; }
 .hero-copy { display: flex; flex-direction: column; align-items: center; gap: 24px; }
 .hero-visual { display: none; }
 .hero-top { max-width: 900px; }
@@ -379,7 +388,9 @@ html[dir="rtl"] .contact-sub { letter-spacing: 0; }
   .nav-links.open { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; position: absolute; top: 60px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--ash); padding: 18px var(--gutter); z-index: 50; }
   .nav-toggle { display: block; }
   .section { padding: 60px 0; }
-  .hero-inner { padding: 64px var(--gutter) 56px; }
+  .hero { min-height: auto; }
+  .hero-inner { padding: 56px var(--gutter) 190px; }
+  .hero-bg { background-size: 94% auto; opacity: 0.5; }
   .mini-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }

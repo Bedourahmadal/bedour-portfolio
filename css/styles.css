@@ -185,22 +185,13 @@ html[dir="rtl"] .arrow-cta svg { transform: scaleX(-1); }
 .hero-inner {
   position: relative; z-index: 1;
   max-width: var(--max-width); margin: 0 auto;
-  padding: 64px var(--gutter) 72px;
-  display: grid; grid-template-columns: 0.92fr 1.08fr;
-  align-items: center; gap: 52px;
+  padding: 56px var(--gutter) 64px;
+  display: grid; grid-template-columns: 1.05fr 0.95fr;
+  align-items: center; gap: 40px;
 }
-/* Hero image card (INVERSA-style large visual) */
-.hero-figure {
-  border-radius: 20px;
-  background: linear-gradient(155deg, #fff4e8 0%, #fdebdb 55%, #fbe2ce 100%);
-  border: 1px solid var(--ash);
-  box-shadow: var(--shadow-ring);
-  aspect-ratio: 5 / 4;
-  padding: 18px;
-  display: grid; place-items: center;
-  overflow: hidden;
-}
-.hero-figure img { width: 100%; height: 100%; object-fit: contain; }
+/* Hero animated visual — blends into the white canvas (no card) */
+.hero-figure { display: grid; place-items: center; min-width: 0; }
+.hero-figure video, .hero-figure img { width: 100%; height: auto; max-width: 540px; display: block; }
 .hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
 .hero-visual { display: none; }
 .hero-top { max-width: 900px; }
@@ -263,6 +254,16 @@ html[dir="rtl"] .hero-name, html[dir="rtl"] .contact h2 { font-family: var(--fon
    WORK CARDS (image-left, text-right)
    ============================================================ */
 .work-list { display: flex; flex-direction: column; gap: 24px; }
+.work-group-title {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 18px; font-weight: 500; letter-spacing: -0.01em;
+  color: var(--graphite);
+  margin: 32px 0 4px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--ash);
+}
+.work-group-title:first-child { margin-top: 0; }
+.work-group-title::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--violet); flex: 0 0 auto; }
 .work-card {
   background: var(--white);
   border: 1px solid var(--ash);
@@ -376,8 +377,9 @@ html[dir="rtl"] .contact-sub { letter-spacing: 0; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 900px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 32px; }
-  .hero-figure { aspect-ratio: 16 / 10; }
+  .hero-inner { grid-template-columns: 1fr; gap: 24px; }
+  .hero-figure { order: -1; }
+  .hero-figure video, .hero-figure img { max-width: 340px; }
   .work-card, .work-card.reverse { grid-template-columns: 1fr; gap: 20px; }
   .work-card.reverse .work-media { order: 0; }
   .work-card.reverse .work-body { order: 0; }

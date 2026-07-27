@@ -371,10 +371,12 @@ html[dir="rtl"] .hero::before {
 .work-media img, .work-media video {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  z-index: 1;
 }
 .work-media .placeholder {
   position: absolute; inset: 0;
+  z-index: 0;
   display: grid; place-items: center;
   font-family: var(--font-mono);
   font-size: 13px; letter-spacing: -0.02em; text-transform: uppercase;
@@ -432,8 +434,8 @@ html[dir="rtl"] .hero::before {
   border-radius: 14px; overflow: hidden;
   background: var(--ink); margin-bottom: 24px;
 }
-.mini-media img, .mini-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.placeholder-sm { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: -0.02em; color: var(--lichen); }
+.mini-media img, .mini-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; z-index: 1; }
+.placeholder-sm { position: absolute; inset: 0; z-index: 0; display: grid; place-items: center; font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: -0.02em; color: var(--lichen); }
 .mini-title { font-size: 24px; letter-spacing: -0.014em; color: var(--ink); margin-bottom: 8px; }
 .mini-sub { font-family: var(--font-mono); font-size: 13px; text-transform: uppercase; letter-spacing: -0.02em; color: var(--graphite); margin-bottom: 16px; }
 .mini-desc { font-size: 16px; line-height: 1.4; letter-spacing: -0.006em; color: var(--graphite); margin-bottom: 20px; }

@@ -399,6 +399,10 @@ html[dir="rtl"] .arrow-cta svg { transform: scaleX(-1); }
 .edu-thesis-label { font-family: var(--font-mono); font-size: 13px; text-transform: uppercase; letter-spacing: -0.02em; color: var(--graphite); margin-bottom: 6px; }
 .edu-thesis-title { font-size: 18px; letter-spacing: -0.006em; color: #c8cdcd; }
 
+.exp-points { margin-top: 14px; }
+.exp-points li { position: relative; padding-inline-start: 20px; font-size: 17px; line-height: 1.45; letter-spacing: -0.006em; color: #c8cdcd; margin-bottom: 8px; }
+.exp-points li::before { content: ""; position: absolute; inset-inline-start: 0; top: 10px; width: 6px; height: 6px; border-radius: 50%; background: var(--lime); }
+
 .cert-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 48px; }
 .cert-item { display: flex; align-items: center; gap: 12px; padding: 20px 0; border-top: 1px solid var(--graphite); font-size: 18px; letter-spacing: -0.006em; color: var(--paper); }
 .cert-item .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--lime); flex: 0 0 auto; }

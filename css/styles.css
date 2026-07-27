@@ -179,11 +179,11 @@ html[dir="rtl"] .arrow-cta svg { transform: scaleX(-1); }
    ============================================================ */
 .hero { position: relative; overflow: hidden; background: var(--white); text-align: center; min-height: 88vh; display: flex; align-items: center; }
 .hero::before { display: none; }
-/* Full transparent hero scene shown uncropped */
+/* Full transparent hero scene — fills the hero (no white bands) */
 .hero-bg {
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background: url('../images/hero-scene.webp') no-repeat center center;
-  background-size: contain;
+  background-size: cover;
 }
 /* Soft white glow behind the centered text */
 .hero::after {
@@ -469,7 +469,7 @@ html[dir="rtl"] .contact-sub { letter-spacing: 0; }
    ============================================================ */
 @media (max-width: 900px) {
   .hero { min-height: 76vh; }
-  .hero-bg { background-size: contain; background-position: center; }
+  .hero-bg { background-size: cover; background-position: center; }
   .hero::after { background: radial-gradient(62% 46% at 50% 50%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 48%, rgba(255,255,255,0) 82%); }
   .hero-inner { padding: 56px var(--gutter); justify-content: center; }
   .hero-copy { max-width: 100%; align-items: center; text-align: center; }

@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Bedour Ahmad Alayyad — XR & AI Developer</title>
-<meta name="description" content="Bedour Ahmad Alayyad — Extended Reality (XR) Developer specializing in AR, VR, and Mixed Reality with Unity and C#, integrating applied AI and computer vision into immersive experiences." />
+<title>Bedour Ahmad Alayyad — XR Developer</title>
+<meta name="description" content="Bedour Ahmad Alayyad — XR Developer creating innovative XR and AI solutions that combine immersive user experiences with cutting-edge technology." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<meta name="theme-color" content="#000000" />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/styles.css?v=3-layout" />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23000000'/><rect x='0.5' y='0.5' width='31' height='31' rx='6.5' fill='none' stroke='%23292d30'/><text x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%239281f7' text-anchor='middle'>B</text></svg>" />
+<meta name="theme-color" content="#222f30" />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400&family=Roboto+Mono:wght@400&family=IBM+Plex+Sans+Arabic:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css?v=4-bio" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23222f30'/><circle cx='16' cy='16' r='6' fill='%23cef79e'/></svg>" />
 </head>
 <body>
 
@@ -18,364 +18,272 @@
 <nav class="nav">
   <div class="nav-inner">
     <a class="logo" href="#top">
-      <span class="logo-glyph">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8.66 5v10L12 22 3.34 17V7L12 2z" stroke="#f0f0f0" stroke-width="1.4"/><path d="M12 7l4.33 2.5v5L12 17l-4.33-2.5v-5L12 7z" fill="#9281f7"/></svg>
-      </span>
+      <span class="logo-glyph"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f7f7f5" stroke-width="1.3"/><circle cx="12" cy="12" r="4.5" fill="#cef79e"/></svg></span>
       <span>Bedour</span>
     </a>
     <div class="nav-links" id="navLinks">
       <a href="#about"><span class="lang-en">About</span><span class="lang-ar">نبذة</span></a>
-      <a href="#projects"><span class="lang-en">Projects</span><span class="lang-ar">المشاريع</span></a>
+      <a href="#work" class="active"><span class="lang-en">Work</span><span class="lang-ar">الأعمال</span></a>
       <a href="#education"><span class="lang-en">Education</span><span class="lang-ar">التعليم</span></a>
       <a href="#skills"><span class="lang-en">Skills</span><span class="lang-ar">المهارات</span></a>
       <a href="#contact"><span class="lang-en">Contact</span><span class="lang-ar">تواصل</span></a>
     </div>
     <div class="nav-actions">
-      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
-        <span class="lang-en">العربية</span><span class="lang-ar">EN</span>
-      </button>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
-      </button>
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language"><span class="lang-en">العربية</span><span class="lang-ar">EN</span></button>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg></button>
     </div>
   </div>
 </nav>
 
 <!-- ============ HERO ============ -->
 <header class="hero" id="top">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-    <a class="announce-pill" href="#contact"><span class="dot"></span><span class="lang-en">Available for opportunities</span><span class="lang-ar">متاحة للفرص</span><span class="chev">↗</span></a>
-    <p class="eyebrow"><span class="lang-en">XR Developer</span><span class="lang-ar">مطوّرة واقع ممتد</span></p>
-    <h1 class="serif-display hero-name">Bedour Ahmad Alayyad</h1>
-    <p class="hero-role"><span class="lang-en">AR · VR · MR — Immersive Experiences</span><span class="lang-ar">معزّز · افتراضي · مختلط — تجارب غامرة</span></p>
-    <p class="hero-tagline">
-      <span class="lang-en">Passionate about creating innovative XR and AI solutions that combine immersive user experiences with cutting-edge technology. I enjoy building interactive applications that inspire, educate, and entertain — applying machine learning and computer vision to solve real-world challenges.</span>
-      <span class="lang-ar block">شغوفة بابتكار حلول مبتكرة في الواقع الممتد والذكاء الاصطناعي تجمع بين تجارب المستخدم الغامرة وأحدث التقنيات. أستمتع ببناء تطبيقات تفاعلية تُلهم وتُعلّم وتُمتع — وأوظّف تعلّم الآلة ورؤية الحاسب لحل تحديات واقعية.</span>
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#projects"><span class="lang-en">View Projects</span><span class="lang-ar">استعراض المشاريع</span></a>
-      <a class="btn btn-secondary" href="#contact"><span class="lang-en">Get in Touch</span><span class="lang-ar">تواصل معي</span></a>
+  <div class="hero-inner">
+    <div class="hero-top">
+      <p class="eyebrow"><span class="lang-en">XR Developer — AR · VR · MR</span><span class="lang-ar">مطوّرة واقع ممتد — معزّز · افتراضي · مختلط</span></p>
+      <h1 class="hero-name">Bedour Ahmad Alayyad.</h1>
     </div>
-    <div class="hero-socials">
-      <a href="mailto:bedourahmadal@gmail.com" aria-label="Email">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-      </a>
-      <a href="tel:+966549466436" aria-label="Phone">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/bedour-a-alayyad-9b4511218" data-social="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.64h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.75c0-1.37-.03-3.13-1.95-3.13-1.96 0-2.26 1.49-2.26 3.03V21h-4z"/></svg>
-      </a>
-    </div>
-    </div><!-- /hero-copy -->
-    <div class="hero-visual" aria-hidden="true">
-      <div class="cube-scene"><div class="cube">
-        <div class="cube-face front"></div><div class="cube-face back"></div>
-        <div class="cube-face right"></div><div class="cube-face left"></div>
-        <div class="cube-face top"></div><div class="cube-face bottom"></div>
-      </div></div>
+    <div class="hero-bottom">
+      <div>
+        <p class="hero-role"><span class="lang-en">Immersive Experiences × Applied AI</span><span class="lang-ar">تجارب غامرة × ذكاء اصطناعي تطبيقي</span></p>
+        <p class="hero-tagline">
+          <span class="lang-en">Passionate about creating innovative XR and AI solutions that combine immersive user experiences with cutting-edge technology — building interactive applications that inspire, educate, and entertain.</span>
+          <span class="lang-ar block">شغوفة بابتكار حلول مبتكرة في الواقع الممتد والذكاء الاصطناعي تجمع بين تجارب المستخدم الغامرة وأحدث التقنيات — وأبني تطبيقات تفاعلية تُلهم وتُعلّم وتُمتع.</span>
+        </p>
+      </div>
+      <div>
+        <div class="hero-actions">
+          <a class="btn btn-ghost" href="#work"><span class="lang-en">View Work</span><span class="lang-ar">الأعمال</span></a>
+          <a class="arrow-cta" href="#contact" aria-label="Contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="hero-socials" style="margin-top:24px">
+          <a href="mailto:bedourahmadal@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+          <a href="tel:+966549466436" aria-label="Phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+          <a href="https://www.linkedin.com/in/bedour-a-alayyad-9b4511218" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.64h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.75c0-1.37-.03-3.13-1.95-3.13-1.96 0-2.26 1.49-2.26 3.03V21h-4z"/></svg></a>
+        </div>
+      </div>
     </div>
   </div>
 </header>
 
-<!-- ============ STACK ============ -->
-<section class="stack-section">
+<!-- ============ 01 · ABOUT (dark) ============ -->
+<section class="section section-dark" id="about">
   <div class="container">
-    <p class="stack-label"><span class="lang-en">Building with</span><span class="lang-ar">أبني باستخدام</span></p>
+    <div class="counter-row"><span class="counter">01</span><span class="section-marker"><span class="lang-en">About</span><span class="lang-ar">نبذة</span></span></div>
+    <div class="section-head">
+      <p class="section-sub">
+        <span class="lang-en">I am an XR Developer specializing in Augmented, Virtual, and Mixed Reality with Unity and C#, backed by a strong foundation in computer science and a Master's degree in Artificial Intelligence. Building immersive experiences is what I love most — and I bring AI, computer vision, and spatial computing into them to make interactions smarter and more natural.</span>
+        <span class="lang-ar block">أنا مطوّرة واقع ممتد متخصّصة في الواقع المعزّز والافتراضي والمختلط باستخدام Unity وC#، بخلفية قوية في علوم الحاسب ودرجة الماجستير في الذكاء الاصطناعي. أكثر ما أحبه هو بناء التجارب الغامرة — وأدمج فيها الذكاء الاصطناعي ورؤية الحاسب والحوسبة المكانية لجعل التفاعل أذكى وأكثر طبيعية.</span>
+      </p>
+    </div>
+    <p class="eyebrow" style="margin-bottom:20px"><span class="lang-en">Building with</span><span class="lang-ar">أبني باستخدام</span></p>
     <div class="stack-grid">
-      <span>Unity</span><span>C#</span><span>Meta&nbsp;Quest</span><span>Unity&nbsp;Sentis</span><span>OpenXR</span><span>Vuforia</span><span>Convai</span><span>MediaPipe</span>
+      <span class="stack-tag">Unity</span><span class="stack-tag">C#</span><span class="stack-tag">Meta Quest 3</span><span class="stack-tag">Meta XR SDK</span><span class="stack-tag">Unity Sentis</span><span class="stack-tag">OpenXR</span><span class="stack-tag">Vuforia</span><span class="stack-tag">Convai</span><span class="stack-tag">MediaPipe</span><span class="stack-tag">YOLO</span><span class="stack-tag">Computer Vision</span>
     </div>
   </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
-<section class="section" id="about">
+<!-- ============ 02 · SELECTED WORK (light) ============ -->
+<section class="section section-light" id="work">
   <div class="container">
+    <div class="counter-row"><span class="counter">02</span><span class="section-marker"><span class="lang-en">Selected Work</span><span class="lang-ar">أعمال مختارة</span></span></div>
     <div class="section-head">
-      <p class="eyebrow"><span class="lang-en">About</span><span class="lang-ar">نبذة</span></p>
-      <h2 class="section-title"><span class="lang-en">About Me</span><span class="lang-ar">نبذة عني</span></h2>
-    </div>
-    <div class="terminal">
-      <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-file">about.md</span></div>
-      <div class="terminal-body">
-        <div class="terminal-line"><span class="prompt">›</span><p><span class="lang-en">I am an Extended Reality (XR) Developer specializing in Augmented, Virtual, and Mixed Reality with Unity and C#, backed by a strong foundation in computer science and a Master's degree in Artificial Intelligence.</span><span class="lang-ar block">أنا مطوّرة واقع ممتد (XR) متخصّصة في الواقع المعزّز والافتراضي والمختلط باستخدام Unity وC#، بخلفية قوية في علوم الحاسب ودرجة الماجستير في الذكاء الاصطناعي.</span></p></div>
-        <div class="terminal-line"><span class="prompt">›</span><p><span class="lang-en">Building immersive experiences is what I love most — and I bring AI, computer vision, and spatial computing into them to make interactions smarter and more natural.</span><span class="lang-ar block">أكثر ما أحبه هو بناء التجارب الغامرة — وأدمج فيها الذكاء الاصطناعي ورؤية الحاسب والحوسبة المكانية لجعل التفاعل أذكى وأكثر طبيعية.</span></p></div>
-        <div class="terminal-line"><span class="prompt">›</span><p><span class="lang-en">My work bridges the physical and digital worlds through XR applications built with AR Foundation, OpenXR, Vuforia, Meta Quest, and Unity Sentis.</span><span class="lang-ar block">يجسر عملي بين العالمين المادي والرقمي عبر تطبيقات واقع ممتد مبنية باستخدام AR Foundation وOpenXR وVuforia وMeta Quest وUnity Sentis.</span></p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FEATURED PROJECTS ============ -->
-<section class="section" id="projects">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow"><span class="lang-en">Selected Work</span><span class="lang-ar">أعمال مختارة</span></p>
       <h2 class="section-title"><span class="lang-en">Featured Projects</span><span class="lang-ar">أبرز المشاريع</span></h2>
     </div>
 
-    <div class="projects-grid">
+    <div class="work-list">
 
-      <!-- Project 1 -->
-      <article class="project-card">
-        <div class="project-visual">
-          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-file">mineral-intelligence.mp4</span></div>
+      <!-- 01 AI Mineral Intelligence -->
+      <article class="work-card">
+        <div class="work-media">
           <video class="project-media" src="images/mineral.mp4" autoplay muted loop playsinline preload="metadata" onerror="this.style.display='none'"></video>
           <span class="placeholder">AI Mineral Intelligence</span>
         </div>
-        <div class="project-body">
-          <div class="project-index">01</div>
-          <h3 class="project-title">AI Mineral Intelligence</h3>
-          <p class="project-subtitle"><span class="lang-en">AI-Powered Mineral Identification in Mixed Reality</span><span class="lang-ar">التعرّف على المعادن بالذكاء الاصطناعي في الواقع المختلط</span></p>
-          <p class="project-desc"><span class="lang-en">A field-based Mixed Reality solution for mining environments. It combines Computer Vision, Large Language Models, and Mixed Reality to deliver instant mineral identification and intelligent analysis on-site. Workers scan minerals with an XR headset and receive real-time properties and AI-generated insights to support field operations.</span><span class="lang-ar block">حلّ ميداني قائم على الواقع المختلط لبيئات التعدين. يجمع بين رؤية الحاسب ونماذج اللغة الكبيرة والواقع المختلط لتقديم تعرّف فوري على المعادن وتحليل ذكي مباشرةً في الموقع. يمسح العاملون المعادن بنظارة XR للحصول على خصائصها ورؤى مولّدة بالذكاء الاصطناعي لدعم العمليات الميدانية.</span></p>
-
-          <div>
-            <span class="highlight-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m20 6-11 11-5-5"/></svg><span class="lang-en">Future Minerals Forum 2026</span><span class="lang-ar">منتدى مستقبل المعادن 2026</span></span>
-            <span class="highlight-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m20 6-11 11-5-5"/></svg><span class="lang-en">Presented to industry &amp; mining experts</span><span class="lang-ar">عرض لقادة الصناعة وخبراء التعدين</span></span>
-          </div>
-
-          <p class="project-section-label"><span class="lang-en">Responsibilities</span><span class="lang-ar">المسؤوليات</span></p>
-          <ul class="resp-list">
-            <li><span class="lang-en">Led end-to-end solution development</span><span class="lang-ar">قيادة تطوير الحل من البداية إلى النهاية</span></li>
-            <li><span class="lang-en">Designed the AI workflow architecture</span><span class="lang-ar">تصميم معمارية تدفّق عمل الذكاء الاصطناعي</span></li>
-            <li><span class="lang-en">Integrated mineral detection models</span><span class="lang-ar">دمج نماذج كشف المعادن</span></li>
-            <li><span class="lang-en">Developed Mixed Reality interactions</span><span class="lang-ar">تطوير تفاعلات الواقع المختلط</span></li>
-            <li><span class="lang-en">Built the real-time AI analysis pipeline</span><span class="lang-ar">بناء خط التحليل الفوري بالذكاء الاصطناعي</span></li>
-          </ul>
-
-          <p class="project-section-label"><span class="lang-en">Technologies</span><span class="lang-ar">التقنيات</span></p>
+        <div class="work-body">
+          <span class="pub-tag"><span class="lang-en">Mixed Reality · AI</span><span class="lang-ar">واقع مختلط · ذكاء اصطناعي</span></span>
+          <div class="work-index">01</div>
+          <h3 class="work-title">AI Mineral Intelligence</h3>
+          <p class="work-subtitle"><span class="lang-en">AI-Powered Mineral Identification in Mixed Reality</span><span class="lang-ar">التعرّف على المعادن بالذكاء الاصطناعي في الواقع المختلط</span></p>
+          <p class="work-excerpt"><span class="lang-en">A field-based Mixed Reality solution for mining environments — combining Computer Vision, LLMs, and Mixed Reality for instant mineral identification and AI insights on-site.</span><span class="lang-ar block">حلّ ميداني بالواقع المختلط لبيئات التعدين — يجمع رؤية الحاسب ونماذج اللغة الكبيرة والواقع المختلط لتعرّف فوري على المعادن ورؤى ذكية في الموقع.</span></p>
+          <span class="highlight-badge"><span class="lang-en">Future Minerals Forum 2026</span><span class="lang-ar">منتدى مستقبل المعادن 2026</span></span>
           <div class="tags">
-            <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Computer Vision</span><span class="tag">Roboflow</span><span class="tag">YOLO</span><span class="tag">OpenAI APIs</span><span class="tag">LLMs</span><span class="tag">Mixed Reality</span><span class="tag">XR Headsets</span><span class="tag">Spatial Computing</span>
+            <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Roboflow</span><span class="tag">YOLO</span><span class="tag">OpenAI</span><span class="tag">LLMs</span><span class="tag">Mixed Reality</span>
           </div>
+          <a class="read-link" href="#contact"><span class="read-text"><span class="lang-en">View Project</span><span class="lang-ar">عرض المشروع</span></span><span class="arrow-cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
         </div>
       </article>
 
-      <!-- Project 2 -->
-      <article class="project-card reverse">
-        <div class="project-visual">
-          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-file">beautymr.mp4</span></div>
+      <!-- 02 BeautyMR -->
+      <article class="work-card reverse">
+        <div class="work-media">
           <video class="project-media" src="images/beautymr.mp4" autoplay muted loop playsinline preload="metadata" onerror="this.style.display='none'"></video>
           <span class="placeholder">BeautyMR</span>
         </div>
-        <div class="project-body">
-          <div class="project-index">02</div>
-          <h3 class="project-title">BeautyMR</h3>
-          <p class="project-subtitle"><span class="lang-en">AI-Powered Mixed Reality Beauty Assistant</span><span class="lang-ar">مساعدة تجميل بالواقع المختلط مدعومة بالذكاء الاصطناعي</span></p>
-          <p class="project-desc"><span class="lang-en">An intelligent Mixed Reality beauty assistant for Meta Quest 3. It enables real-time facial analysis and virtual makeup using on-device AI and spatial computing. Unlike 2D beauty apps, BeautyMR builds a live 3D facial map so virtual cosmetics stay aligned with facial movement and geometry — with all AI inference running directly on the device.</span><span class="lang-ar block">مساعدة تجميل ذكية بالواقع المختلط لجهاز Meta Quest 3. تتيح تحليل الوجه وتجربة المكياج الافتراضي في الوقت الفعلي باستخدام ذكاء اصطناعي يعمل على الجهاز والحوسبة المكانية. وخلافًا لتطبيقات التجميل ثنائية الأبعاد، تبني خريطة ثلاثية الأبعاد حيّة للوجه لتبقى المستحضرات متوافقة مع حركة الوجه وهندسته — مع تنفيذ كل الاستدلالات مباشرةً على الجهاز.</span></p>
-
-          <p class="project-section-label"><span class="lang-en">Responsibilities</span><span class="lang-ar">المسؤوليات</span></p>
-          <ul class="resp-list">
-            <li><span class="lang-en">Developed the complete prototype</span><span class="lang-ar">تطوير النموذج الأولي كاملًا</span></li>
-            <li><span class="lang-en">Integrated AI models directly on Meta Quest 3</span><span class="lang-ar">دمج نماذج الذكاء الاصطناعي مباشرةً على Meta Quest 3</span></li>
-            <li><span class="lang-en">Implemented the facial tracking pipeline</span><span class="lang-ar">تنفيذ خط تتبّع الوجه</span></li>
-            <li><span class="lang-en">Built a stereo vision depth estimation system</span><span class="lang-ar">بناء نظام تقدير العمق بالرؤية المجسّمة</span></li>
-            <li><span class="lang-en">Optimized performance for standalone execution</span><span class="lang-ar">تحسين الأداء للتشغيل المستقل</span></li>
-          </ul>
-
-          <p class="project-section-label"><span class="lang-en">Technologies</span><span class="lang-ar">التقنيات</span></p>
+        <div class="work-body">
+          <span class="pub-tag"><span class="lang-en">Mixed Reality · On-Device AI</span><span class="lang-ar">واقع مختلط · ذكاء على الجهاز</span></span>
+          <div class="work-index">02</div>
+          <h3 class="work-title">BeautyMR</h3>
+          <p class="work-subtitle"><span class="lang-en">AI-Powered Mixed Reality Beauty Assistant</span><span class="lang-ar">مساعدة تجميل بالواقع المختلط مدعومة بالذكاء الاصطناعي</span></p>
+          <p class="work-excerpt"><span class="lang-en">An intelligent MR beauty assistant for Meta Quest 3. It builds a live 3D facial map so virtual cosmetics stay aligned with facial movement — with all AI inference running directly on-device.</span><span class="lang-ar block">مساعدة تجميل ذكية بالواقع المختلط لجهاز Meta Quest 3. تبني خريطة ثلاثية الأبعاد حيّة للوجه لتبقى المستحضرات متوافقة مع حركته — مع تنفيذ كل الاستدلالات على الجهاز.</span></p>
           <div class="tags">
-            <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Meta Quest 3</span><span class="tag">Meta XR SDK</span><span class="tag">Unity Sentis</span><span class="tag">BlazeFace</span><span class="tag">MediaPipe Face Mesh</span><span class="tag">Computer Vision</span><span class="tag">Stereo Vision</span><span class="tag">Mixed Reality</span>
+            <span class="tag">Unity</span><span class="tag">Meta Quest 3</span><span class="tag">Meta XR SDK</span><span class="tag">Unity Sentis</span><span class="tag">BlazeFace</span><span class="tag">Stereo Vision</span>
           </div>
+          <a class="read-link" href="#contact"><span class="read-text"><span class="lang-en">View Project</span><span class="lang-ar">عرض المشروع</span></span><span class="arrow-cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
         </div>
       </article>
 
-      <!-- Project 3 -->
-      <article class="project-card">
-        <div class="project-visual">
-          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-file">vrlingo.mp4</span></div>
+      <!-- 03 VRlingo -->
+      <article class="work-card">
+        <div class="work-media">
           <video class="project-media" src="images/vrlingo.mp4" autoplay muted loop playsinline preload="metadata" onerror="this.style.display='none'"></video>
           <span class="placeholder">VRlingo</span>
         </div>
-        <div class="project-body">
-          <div class="project-index">03</div>
-          <h3 class="project-title">VRlingo</h3>
-          <p class="project-subtitle"><span class="lang-en">AI-Powered Virtual Reality Language Learning Platform</span><span class="lang-ar">منصّة تعلّم لغات بالواقع الافتراضي مدعومة بالذكاء الاصطناعي</span></p>
-          <p class="project-desc"><span class="lang-en">An immersive language-learning platform that combines Virtual Reality and AI to let learners practice real-world conversations inside realistic environments. Learners interact with AI-powered characters, explore scenarios, and improve their communication skills through interactive dialogue.</span><span class="lang-ar block">منصّة غامرة لتعلّم اللغات تجمع بين الواقع الافتراضي والذكاء الاصطناعي لتمكين المتعلّمين من ممارسة محادثات واقعية داخل بيئات واقعية. يتفاعل المتعلّمون مع شخصيات مدعومة بالذكاء الاصطناعي، ويستكشفون سيناريوهات متنوّعة، ويطوّرون مهارات التواصل عبر حوارات تفاعلية.</span></p>
-
-          <p class="project-section-label"><span class="lang-en">Responsibilities</span><span class="lang-ar">المسؤوليات</span></p>
-          <ul class="resp-list">
-            <li><span class="lang-en">Developed VR environments</span><span class="lang-ar">تطوير بيئات الواقع الافتراضي</span></li>
-            <li><span class="lang-en">Designed AI conversation flows</span><span class="lang-ar">تصميم تدفّقات المحادثة بالذكاء الاصطناعي</span></li>
-            <li><span class="lang-en">Integrated conversational NPCs</span><span class="lang-ar">دمج شخصيات حوارية</span></li>
-            <li><span class="lang-en">Implemented voice interaction systems</span><span class="lang-ar">تنفيذ أنظمة التفاعل الصوتي</span></li>
-            <li><span class="lang-en">Optimized application performance</span><span class="lang-ar">تحسين أداء التطبيق</span></li>
-          </ul>
-
-          <p class="project-section-label"><span class="lang-en">Technologies</span><span class="lang-ar">التقنيات</span></p>
+        <div class="work-body">
+          <span class="pub-tag"><span class="lang-en">Virtual Reality · Conversational AI</span><span class="lang-ar">واقع افتراضي · ذكاء حواري</span></span>
+          <div class="work-index">03</div>
+          <h3 class="work-title">VRlingo</h3>
+          <p class="work-subtitle"><span class="lang-en">AI-Powered Virtual Reality Language Learning</span><span class="lang-ar">تعلّم اللغات بالواقع الافتراضي والذكاء الاصطناعي</span></p>
+          <p class="work-excerpt"><span class="lang-en">An immersive VR platform where learners practice real-world conversations with AI-powered characters inside realistic environments, building communication skills through interactive dialogue.</span><span class="lang-ar block">منصّة غامرة بالواقع الافتراضي يمارس فيها المتعلّمون محادثات واقعية مع شخصيات مدعومة بالذكاء الاصطناعي داخل بيئات واقعية لتطوير مهارات التواصل.</span></p>
           <div class="tags">
-            <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Virtual Reality</span><span class="tag">Convai</span><span class="tag">OpenAI API</span><span class="tag">Speech Recognition</span><span class="tag">Text-to-Speech</span><span class="tag">Prompt Engineering</span><span class="tag">Dialogue Management</span>
+            <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Convai</span><span class="tag">OpenAI</span><span class="tag">Speech-to-Text</span><span class="tag">TTS</span>
           </div>
+          <a class="read-link" href="#contact"><span class="read-text"><span class="lang-en">View Project</span><span class="lang-ar">عرض المشروع</span></span><span class="arrow-cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
         </div>
       </article>
 
-      <!-- Project 4 -->
-      <article class="project-card reverse">
-        <div class="project-visual">
-          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-file">emergency-training.mp4</span></div>
+      <!-- 04 Emergency Response Training -->
+      <article class="work-card reverse">
+        <div class="work-media">
           <video class="project-media" src="images/emergency.mp4" autoplay muted loop playsinline preload="metadata" onerror="this.style.display='none'"></video>
           <span class="placeholder">Emergency Response Training</span>
         </div>
-        <div class="project-body">
-          <div class="project-index">04</div>
-          <h3 class="project-title"><span class="lang-en">Emergency Response Training</span><span class="lang-ar">التدريب على الاستجابة للطوارئ</span></h3>
-          <p class="project-subtitle"><span class="lang-en">AI-Enhanced Emergency Response Training Simulation</span><span class="lang-ar">محاكاة تدريب على الاستجابة للطوارئ معزّزة بالذكاء الاصطناعي</span></p>
-          <p class="project-desc"><span class="lang-en">A realistic training simulation that recreates emergency-response workflows in an immersive virtual environment — covering emergency dispatch, firefighting scenarios, casualty rescue, medical intervention, and public-safety awareness.</span><span class="lang-ar block">محاكاة تدريبية واقعية تعيد بناء مسارات الاستجابة للطوارئ داخل بيئة افتراضية غامرة — تشمل عمليات التوجيه الطارئ، وسيناريوهات مكافحة الحرائق، وإنقاذ المصابين، والتدخّل الطبي، والتوعية بالسلامة العامة.</span></p>
-
-          <p class="project-section-label"><span class="lang-en">Responsibilities</span><span class="lang-ar">المسؤوليات</span></p>
-          <ul class="resp-list">
-            <li><span class="lang-en">Designed the simulation architecture</span><span class="lang-ar">تصميم معمارية المحاكاة</span></li>
-            <li><span class="lang-en">Developed AI-driven systems</span><span class="lang-ar">تطوير أنظمة مدفوعة بالذكاء الاصطناعي</span></li>
-            <li><span class="lang-en">Built emergency response mechanics</span><span class="lang-ar">بناء آليات الاستجابة للطوارئ</span></li>
-            <li><span class="lang-en">Implemented the first-aid workflow</span><span class="lang-ar">تنفيذ مسار الإسعافات الأولية</span></li>
-            <li><span class="lang-en">Created scoring and progression systems</span><span class="lang-ar">إنشاء أنظمة التقييم والتقدّم</span></li>
-            <li><span class="lang-en">Integrated AI educational dialogue</span><span class="lang-ar">دمج حوار تعليمي بالذكاء الاصطناعي</span></li>
-          </ul>
-
-          <p class="project-section-label"><span class="lang-en">Technologies</span><span class="lang-ar">التقنيات</span></p>
+        <div class="work-body">
+          <span class="pub-tag"><span class="lang-en">Virtual Reality · Simulation</span><span class="lang-ar">واقع افتراضي · محاكاة</span></span>
+          <div class="work-index">04</div>
+          <h3 class="work-title"><span class="lang-en">Emergency Response Training</span><span class="lang-ar">التدريب على الاستجابة للطوارئ</span></h3>
+          <p class="work-subtitle"><span class="lang-en">AI-Enhanced Emergency Response Training Simulation</span><span class="lang-ar">محاكاة تدريب على الاستجابة للطوارئ معزّزة بالذكاء الاصطناعي</span></p>
+          <p class="work-excerpt"><span class="lang-en">A realistic training simulation recreating emergency-response workflows in an immersive environment — emergency dispatch, firefighting, casualty rescue, medical intervention, and public safety.</span><span class="lang-ar block">محاكاة تدريبية واقعية تعيد بناء مسارات الاستجابة للطوارئ في بيئة غامرة — التوجيه الطارئ، مكافحة الحرائق، إنقاذ المصابين، التدخّل الطبي، والسلامة العامة.</span></p>
           <div class="tags">
-            <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">NavMesh</span><span class="tag">NavMeshAgent</span><span class="tag">Convai</span><span class="tag">Vehicle Systems</span><span class="tag">Particle Systems</span><span class="tag">VFX Graph</span><span class="tag">AI Dialogue</span>
+            <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">NavMesh</span><span class="tag">Convai</span><span class="tag">VFX Graph</span><span class="tag">AI Dialogue</span>
           </div>
+          <a class="read-link" href="#contact"><span class="read-text"><span class="lang-en">View Project</span><span class="lang-ar">عرض المشروع</span></span><span class="arrow-cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
         </div>
       </article>
 
     </div>
-  </div>
-</section>
 
-<!-- ============ ADDITIONAL PROJECTS ============ -->
-<section class="section" id="more-projects">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow"><span class="lang-en">More Work</span><span class="lang-ar">أعمال أخرى</span></p>
-      <h2 class="section-title"><span class="lang-en">Additional Projects</span><span class="lang-ar">مشاريع إضافية</span></h2>
+    <!-- Additional projects -->
+    <div class="section-head" style="margin-top:80px">
+      <div class="counter-row"><span class="counter">03</span><span class="section-marker"><span class="lang-en">More Work</span><span class="lang-ar">أعمال أخرى</span></span></div>
     </div>
     <div class="mini-grid">
-
       <article class="mini-card">
         <div class="mini-media"><video class="project-media" src="images/arbook.mp4" autoplay muted loop playsinline preload="metadata" onerror="this.style.display='none'"></video><span class="placeholder-sm">AR Book App</span></div>
         <h3 class="mini-title">AR Book App</h3>
         <p class="mini-sub"><span class="lang-en">Augmented Reality Interactive Book</span><span class="lang-ar">كتاب تفاعلي بالواقع المعزّز</span></p>
-        <p class="mini-desc"><span class="lang-en">Turns traditional books into interactive digital experiences — scan a cover to access 3D visualization, summaries, ratings, audiobooks, movie adaptations, PDFs, and purchase links.</span><span class="lang-ar block">يحوّل الكتب التقليدية إلى تجارب رقمية تفاعلية — امسح الغلاف للوصول إلى عرض ثلاثي الأبعاد وملخّصات وتقييمات وكتب صوتية ونسخ سينمائية وملفات PDF وروابط شراء.</span></p>
-        <div class="tags"><span class="tag">Unity</span><span class="tag">Vuforia</span><span class="tag">C#</span><span class="tag">Android</span><span class="tag">Adobe XD</span></div>
+        <p class="mini-desc"><span class="lang-en">Turns traditional books into interactive digital experiences — scan a cover for 3D visualization, summaries, audiobooks, and more.</span><span class="lang-ar block">يحوّل الكتب التقليدية إلى تجارب رقمية تفاعلية — امسح الغلاف لعرض ثلاثي الأبعاد وملخّصات وكتب صوتية والمزيد.</span></p>
+        <div class="mini-foot">
+          <div class="tags" style="margin:0"><span class="tag">Unity</span><span class="tag">Vuforia</span><span class="tag">Android</span></div>
+        </div>
       </article>
-
       <article class="mini-card">
         <div class="mini-media"><img src="images/plants.jpg" alt="AR Plants" onerror="this.style.display='none'" /><span class="placeholder-sm">AR Plants</span></div>
         <h3 class="mini-title">AR Plants</h3>
-        <p class="mini-sub"><span class="lang-en">Interactive AR Plant Learning</span><span class="lang-ar">تعلّم النباتات التفاعلي بالواقع المعزّز</span></p>
-        <p class="mini-desc"><span class="lang-en">An educational AR app that visualizes plant species in your real environment with interactive 3D models, detailed information, and essential care instructions.</span><span class="lang-ar block">تطبيق تعليمي بالواقع المعزّز يعرض أنواع النباتات في بيئتك الحقيقية بنماذج ثلاثية الأبعاد تفاعلية ومعلومات مفصّلة وإرشادات عناية أساسية.</span></p>
-        <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Vuforia</span><span class="tag">AR</span><span class="tag">Android</span></div>
+        <p class="mini-sub"><span class="lang-en">Interactive AR Plant Learning</span><span class="lang-ar">تعلّم النباتات بالواقع المعزّز</span></p>
+        <p class="mini-desc"><span class="lang-en">An educational AR app that visualizes plant species in your real environment with interactive 3D models and care instructions.</span><span class="lang-ar block">تطبيق تعليمي بالواقع المعزّز يعرض أنواع النباتات في بيئتك الحقيقية بنماذج ثلاثية الأبعاد وإرشادات عناية.</span></p>
+        <div class="mini-foot">
+          <div class="tags" style="margin:0"><span class="tag">Unity</span><span class="tag">Vuforia</span><span class="tag">Android</span></div>
+        </div>
       </article>
-
     </div>
   </div>
 </section>
 
-<!-- ============ EDUCATION ============ -->
-<section class="section" id="education">
+<!-- ============ 04 · EDUCATION (dark) ============ -->
+<section class="section section-dark" id="education">
   <div class="container">
-    <div class="section-head">
-      <p class="eyebrow"><span class="lang-en">Background</span><span class="lang-ar">الخلفية العلمية</span></p>
-      <h2 class="section-title"><span class="lang-en">Education</span><span class="lang-ar">التعليم</span></h2>
-    </div>
-    <div class="edu-grid">
-
-      <div class="edu-card">
-        <h3 class="edu-degree"><span class="lang-en">MSc in Artificial Intelligence</span><span class="lang-ar">ماجستير العلوم في الذكاء الاصطناعي</span></h3>
-        <p class="edu-meta"><span class="school"><span class="lang-en">Bahrain Polytechnic</span><span class="lang-ar">بوليتكنك البحرين</span></span></p>
-        <p class="edu-meta">2023 – 2024</p>
-        <p class="edu-thesis-label"><span class="lang-en">Thesis</span><span class="lang-ar">الأطروحة</span></p>
-        <p class="edu-thesis-title"><span class="lang-en">Deepfake Face Images Detection Using Deep Learning Models</span><span class="lang-ar">كشف صور الوجوه المزيّفة (Deepfake) باستخدام نماذج التعلّم العميق</span></p>
-      </div>
-
-      <div class="edu-card">
-        <h3 class="edu-degree"><span class="lang-en">BSc in Computer Science</span><span class="lang-ar">بكالوريوس العلوم في علوم الحاسب</span></h3>
-        <p class="edu-meta"><span class="school"><span class="lang-en">Shaqra University</span><span class="lang-ar">جامعة شقراء</span></span></p>
-        <p class="edu-meta">2017 – 2021</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============ CERTIFICATIONS ============ -->
-<section class="section" id="certifications">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow"><span class="lang-en">Continuous Learning</span><span class="lang-ar">تعلّم مستمر</span></p>
-      <h2 class="section-title"><span class="lang-en">Training &amp; Certifications</span><span class="lang-ar">التدريب والشهادات</span></h2>
-    </div>
-    <div class="cert-list">
-      <div class="cert-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/><path d="m9 14-2 7 5-3 5 3-2-7"/></svg><span><span class="lang-en">XR Development Bootcamp — Tuwaiq Academy</span><span class="lang-ar">معسكر تطوير الواقع الممتد — أكاديمية طويق</span></span></div>
-      <div class="cert-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/><path d="m9 14-2 7 5-3 5 3-2-7"/></svg><span><span class="lang-en">Generative AI Professional Training — SDAIA &amp; NVIDIA</span><span class="lang-ar">تدريب احترافي في الذكاء الاصطناعي التوليدي — سدايا وNVIDIA</span></span></div>
-      <div class="cert-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/><path d="m9 14-2 7 5-3 5 3-2-7"/></svg><span><span class="lang-en">Unity Foundations Learning Plan</span><span class="lang-ar">خطة تعلّم أساسيات Unity</span></span></div>
-      <div class="cert-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/><path d="m9 14-2 7 5-3 5 3-2-7"/></svg><span><span class="lang-en">Augmented Reality Challenge — Saudi Electronic University</span><span class="lang-ar">تحدّي الواقع المعزّز — الجامعة السعودية الإلكترونية</span></span></div>
-      <div class="cert-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/><path d="m9 14-2 7 5-3 5 3-2-7"/></svg><span><span class="lang-en">AR &amp; VR Bootcamp — Saudi Digital Academy</span><span class="lang-ar">معسكر الواقع المعزّز والافتراضي — الأكاديمية السعودية الرقمية</span></span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SKILLS ============ -->
-<section class="section" id="skills">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow"><span class="lang-en">Toolbox</span><span class="lang-ar">الأدوات</span></p>
-      <h2 class="section-title"><span class="lang-en">Core Skills</span><span class="lang-ar">المهارات الأساسية</span></h2>
-    </div>
-    <div class="skills-grid">
-
-      <div class="skill-group">
-        <h3><span class="lang-en">XR &amp; Spatial Computing</span><span class="lang-ar">الواقع الممتد والحوسبة المكانية</span></h3>
-        <div class="skill-chips">
-          <span class="skill-chip">Extended Reality (XR)</span><span class="skill-chip">Virtual Reality</span><span class="skill-chip">Augmented Reality</span><span class="skill-chip">Mixed Reality</span><span class="skill-chip">Spatial Computing</span><span class="skill-chip">Meta Quest Development</span><span class="skill-chip">XR Interaction Design</span>
+    <div class="counter-row"><span class="counter">04</span><span class="section-marker"><span class="lang-en">Background</span><span class="lang-ar">الخلفية العلمية</span></span></div>
+    <div class="section-head"><h2 class="section-title"><span class="lang-en">Education</span><span class="lang-ar">التعليم</span></h2></div>
+    <div class="edu-list">
+      <div class="edu-row">
+        <div class="edu-when">2023 — 2024</div>
+        <div>
+          <h3 class="edu-degree"><span class="lang-en">MSc in Artificial Intelligence</span><span class="lang-ar">ماجستير العلوم في الذكاء الاصطناعي</span></h3>
+          <p class="edu-school"><span class="lang-en">Bahrain Polytechnic</span><span class="lang-ar">بوليتكنك البحرين</span></p>
+          <p class="edu-thesis-label"><span class="lang-en">Thesis</span><span class="lang-ar">الأطروحة</span></p>
+          <p class="edu-thesis-title"><span class="lang-en">Deepfake Face Images Detection Using Deep Learning Models</span><span class="lang-ar">كشف صور الوجوه المزيّفة (Deepfake) باستخدام نماذج التعلّم العميق</span></p>
         </div>
       </div>
+      <div class="edu-row">
+        <div class="edu-when">2017 — 2021</div>
+        <div>
+          <h3 class="edu-degree"><span class="lang-en">BSc in Computer Science</span><span class="lang-ar">بكالوريوس العلوم في علوم الحاسب</span></h3>
+          <p class="edu-school"><span class="lang-en">Shaqra University</span><span class="lang-ar">جامعة شقراء</span></p>
+        </div>
+      </div>
+    </div>
 
+    <div class="section-head" style="margin:80px 0 40px"><div class="counter-row"><span class="counter">05</span><span class="section-marker"><span class="lang-en">Training &amp; Certifications</span><span class="lang-ar">التدريب والشهادات</span></span></div></div>
+    <div class="cert-list">
+      <div class="cert-item"><span class="dot"></span><span><span class="lang-en">XR Development Bootcamp — Tuwaiq Academy</span><span class="lang-ar">معسكر تطوير الواقع الممتد — أكاديمية طويق</span></span></div>
+      <div class="cert-item"><span class="dot"></span><span><span class="lang-en">Generative AI — SDAIA &amp; NVIDIA</span><span class="lang-ar">الذكاء الاصطناعي التوليدي — سدايا وNVIDIA</span></span></div>
+      <div class="cert-item"><span class="dot"></span><span><span class="lang-en">Unity Foundations Learning Plan</span><span class="lang-ar">خطة تعلّم أساسيات Unity</span></span></div>
+      <div class="cert-item"><span class="dot"></span><span><span class="lang-en">AR Challenge — Saudi Electronic University</span><span class="lang-ar">تحدّي الواقع المعزّز — الجامعة السعودية الإلكترونية</span></span></div>
+      <div class="cert-item"><span class="dot"></span><span><span class="lang-en">AR &amp; VR Bootcamp — Saudi Digital Academy</span><span class="lang-ar">معسكر الواقع المعزّز والافتراضي — الأكاديمية السعودية الرقمية</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 · SKILLS (dark) ============ -->
+<section class="section section-dark" id="skills">
+  <div class="container">
+    <div class="counter-row"><span class="counter">06</span><span class="section-marker"><span class="lang-en">Toolbox</span><span class="lang-ar">الأدوات</span></span></div>
+    <div class="section-head"><h2 class="section-title"><span class="lang-en">Core Skills</span><span class="lang-ar">المهارات الأساسية</span></h2></div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3><span class="lang-en">XR &amp; Spatial</span><span class="lang-ar">الواقع الممتد والمكاني</span></h3>
+        <div class="skill-chips"><span class="skill-chip">XR</span><span class="skill-chip">Virtual Reality</span><span class="skill-chip">Augmented Reality</span><span class="skill-chip">Mixed Reality</span><span class="skill-chip">Meta Quest</span><span class="skill-chip">Spatial Computing</span></div>
+      </div>
       <div class="skill-group">
         <h3><span class="lang-en">Artificial Intelligence</span><span class="lang-ar">الذكاء الاصطناعي</span></h3>
-        <div class="skill-chips">
-          <span class="skill-chip">Computer Vision</span><span class="skill-chip">Object Detection</span><span class="skill-chip">YOLO</span><span class="skill-chip">MediaPipe</span><span class="skill-chip">Conversational AI</span><span class="skill-chip">LLMs</span><span class="skill-chip">AI Integration</span>
-        </div>
+        <div class="skill-chips"><span class="skill-chip">Computer Vision</span><span class="skill-chip">YOLO</span><span class="skill-chip">MediaPipe</span><span class="skill-chip">Conversational AI</span><span class="skill-chip">LLMs</span></div>
       </div>
-
       <div class="skill-group">
         <h3><span class="lang-en">Development</span><span class="lang-ar">التطوير</span></h3>
-        <div class="skill-chips">
-          <span class="skill-chip">Unity</span><span class="skill-chip">C#</span><span class="skill-chip">Meta XR SDK</span><span class="skill-chip">Vuforia Engine</span><span class="skill-chip">Convai</span>
-        </div>
+        <div class="skill-chips"><span class="skill-chip">Unity</span><span class="skill-chip">C#</span><span class="skill-chip">Meta XR SDK</span><span class="skill-chip">Vuforia</span><span class="skill-chip">Convai</span></div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
+<!-- ============ CONTACT (dark) ============ -->
 <section class="contact" id="contact">
   <div class="container">
-    <p class="eyebrow"><span class="lang-en">Contact</span><span class="lang-ar">تواصل</span></p>
+    <p class="contact-sub"><span class="lang-en">Available for opportunities</span><span class="lang-ar">متاحة للفرص</span></p>
     <h2><span class="lang-en">Let's build something immersive.</span><span class="lang-ar">لنبنِ شيئًا غامرًا معًا.</span></h2>
-    <p><span class="lang-en">Open to opportunities and collaborations in Extended Reality &amp; AI. Based in Riyadh, Saudi Arabia.</span><span class="lang-ar block">منفتحة على الفرص والتعاون في مجال الواقع الممتد والذكاء الاصطناعي. مقيمة في الرياض، السعودية.</span></p>
     <div class="contact-actions">
-      <a class="btn btn-primary" href="mailto:bedourahmadal@gmail.com"><span class="lang-en">Email Me</span><span class="lang-ar">راسليني</span></a>
-      <a class="btn btn-secondary" href="tel:+966549466436" dir="ltr">+966 54 946 6436</a>
-      <a class="btn btn-secondary" href="https://www.linkedin.com/in/bedour-a-alayyad-9b4511218" data-social="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-filled" href="mailto:bedourahmadal@gmail.com"><span class="lang-en">Email Me</span><span class="lang-ar">راسليني</span></a>
+      <a class="arrow-cta" href="mailto:bedourahmadal@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="contact-lines">
+      <a href="mailto:bedourahmadal@gmail.com">bedourahmadal@gmail.com</a>
+      <a href="tel:+966549466436" dir="ltr">+966 54 946 6436</a>
+      <a href="https://www.linkedin.com/in/bedour-a-alayyad-9b4511218" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
+<!-- ============ FOOTER (black) ============ -->
 <footer class="footer">
   <div class="footer-inner">
     <span class="footer-name">© <span id="year"></span> Bedour Ahmad Alayyad</span>
     <div class="footer-links">
-      <a href="mailto:bedourahmadal@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
-      <a href="tel:+966549466436" aria-label="Phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
-      <a href="https://www.linkedin.com/in/bedour-a-alayyad-9b4511218" data-social="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.64h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.75c0-1.37-.03-3.13-1.95-3.13-1.96 0-2.26 1.49-2.26 3.03V21h-4z"/></svg></a>
+      <a href="mailto:bedourahmadal@gmail.com">Email</a>
+      <a href="tel:+966549466436">Phone</a>
+      <a href="https://www.linkedin.com/in/bedour-a-alayyad-9b4511218" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </footer>
 
-<script src="js/main.js?v=3-layout"></script>
+<script src="js/main.js?v=4-bio"></script>
 </body>
 </html>

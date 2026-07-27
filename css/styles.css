@@ -177,22 +177,26 @@ html[dir="rtl"] .arrow-cta svg { transform: scaleX(-1); }
 /* ============================================================
    HERO (centered editorial stack + soft violet wash)
    ============================================================ */
-.hero { position: relative; overflow: hidden; background: var(--white); text-align: left; }
+.hero { position: relative; overflow: hidden; background: var(--white); text-align: left; min-height: 86vh; display: flex; align-items: center; }
 .hero::before {
   content: ""; position: absolute; inset: -24% 0 auto 0; height: 680px; pointer-events: none; z-index: 0;
-  background: radial-gradient(60% 60% at 60% 12%, rgba(255,206,158,0.42), rgba(255,239,224,0.5) 48%, transparent 74%);
+  background: radial-gradient(58% 58% at 64% 12%, rgba(255,206,158,0.4), rgba(255,239,224,0.5) 48%, transparent 74%);
 }
+/* Full-bleed hero scene (transparent product shot) — Resend-style, text on the left */
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: url('../images/hero-bg.webp') no-repeat right center;
+  background-size: min(64%, 880px) auto;
+  opacity: 0.9;
+}
+html[dir="rtl"] .hero-bg { background-position: left center; }
 .hero-inner {
   position: relative; z-index: 1;
-  max-width: var(--max-width); margin: 0 auto;
-  padding: 56px var(--gutter) 64px;
-  display: grid; grid-template-columns: 1.05fr 0.95fr;
-  align-items: center; gap: 40px;
+  width: 100%; max-width: var(--max-width); margin: 0 auto;
+  padding: 72px var(--gutter);
+  display: flex;
 }
-/* Hero animated visual — blends into the white canvas (no card) */
-.hero-figure { display: grid; place-items: center; min-width: 0; }
-.hero-figure video, .hero-figure img { width: 100%; height: auto; max-width: 540px; display: block; }
-.hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+.hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; max-width: 560px; }
 .hero-visual { display: none; }
 .hero-top { max-width: 900px; }
 
@@ -255,15 +259,18 @@ html[dir="rtl"] .hero-name, html[dir="rtl"] .contact h2 { font-family: var(--fon
    ============================================================ */
 .work-list { display: flex; flex-direction: column; gap: 24px; }
 .work-group-title {
-  display: flex; align-items: center; gap: 10px;
-  font-size: 18px; font-weight: 500; letter-spacing: -0.01em;
-  color: var(--graphite);
-  margin: 32px 0 4px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--ash);
+  align-self: flex-start;
+  display: inline-flex; align-items: center;
+  font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  color: #fff;
+  background: var(--violet);
+  padding: 9px 20px;
+  border-radius: 9999px;
+  margin: 40px 0 14px;
+  box-shadow: rgba(242,102,11,0.28) 0 6px 18px -4px;
 }
+html[dir="rtl"] .work-group-title { letter-spacing: 0; }
 .work-group-title:first-child { margin-top: 0; }
-.work-group-title::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--violet); flex: 0 0 auto; }
 .work-card {
   background: var(--white);
   border: 1px solid var(--ash);
@@ -377,9 +384,11 @@ html[dir="rtl"] .contact-sub { letter-spacing: 0; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 900px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 24px; }
-  .hero-figure { order: -1; }
-  .hero-figure video, .hero-figure img { max-width: 340px; }
+  .hero { min-height: auto; }
+  .hero-bg { background-size: 96% auto; background-position: center bottom; opacity: 0.5; }
+  html[dir="rtl"] .hero-bg { background-position: center bottom; }
+  .hero-copy { max-width: 100%; }
+  .hero-inner { padding: 56px var(--gutter) 250px; }
   .work-card, .work-card.reverse { grid-template-columns: 1fr; gap: 20px; }
   .work-card.reverse .work-media { order: 0; }
   .work-card.reverse .work-body { order: 0; }
@@ -394,7 +403,8 @@ html[dir="rtl"] .contact-sub { letter-spacing: 0; }
   .nav-links.open { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; position: absolute; top: 60px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--ash); padding: 18px var(--gutter); z-index: 50; }
   .nav-toggle { display: block; }
   .section { padding: 60px 0; }
-  .hero-inner { padding: 48px var(--gutter) 56px; }
+  .hero-inner { padding: 44px var(--gutter) 190px; }
+  .hero-bg { background-size: 116% auto; opacity: 0.42; }
   .mini-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }

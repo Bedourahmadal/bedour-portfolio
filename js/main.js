@@ -51,4 +51,51 @@
   /* ---- Footer year ---- */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ---- Active nav link on scroll ---- */
+  var sections = [].slice.call(document.querySelectorAll('section[id], header[id]'));
+  var linkFor = {};
+  [].slice.call(document.querySelectorAll('.nav-links a')).forEach(function (a) {
+    var id = (a.getAttribute('href') || '').replace('#', '');
+    if (id) linkFor[id] = a;
+  });
+  if ('IntersectionObserver' in window && sections.length) {
+    var navObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var id = en.target.id;
+        Object.keys(linkFor).forEach(function (k) {
+          linkFor[k].classList.toggle('active', k === id);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    sections.forEach(function (s) { navObs.observe(s); });
+  }
+
+  /* ---- Scroll reveal (restrained) ---- */
+  var revealTargets = [].slice.call(document.querySelectorAll(
+    '.section-head, .work-card, .mini-card, .edu-row, .cert-item, .skill-group, .stack-grid, .hero-bottom, .contact-actions, .contact-lines'
+  ));
+  if ('IntersectionObserver' in window && revealTargets.length) {
+    revealTargets.forEach(function (el) { el.classList.add('reveal'); });
+    var revObs = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add('in');
+          obs.unobserve(en.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    revealTargets.forEach(function (el) { revObs.observe(el); });
+    // Safety net: if the observer clearly isn't firing (nothing revealed after
+    // 1.5s), force everything visible so content is never stuck hidden. When the
+    // observer IS working, this is a no-op and scroll-reveal proceeds normally.
+    setTimeout(function () {
+      if (!document.querySelector('.reveal.in')) {
+        revealTargets.forEach(function (el) { el.classList.add('in'); });
+      }
+    }, 1500);
+  } else {
+    revealTargets.forEach(function (el) { el.classList.add('in'); });
+  }
 })();

@@ -5,6 +5,14 @@
    single-weight Aspekta type, one bioluminescent lime accent.
    ============================================================ */
 
+@font-face {
+  font-family: 'Aspekta';
+  src: url('../fonts/Aspekta-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Colors */
   --lime: #cef79e;
@@ -18,7 +26,7 @@
   --void: #000000;
 
   /* Typography */
-  --font-body: 'Inter Tight', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Aspekta', 'Inter Tight', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-arabic: 'IBM Plex Sans Arabic', 'Inter Tight', system-ui, sans-serif;
   --font-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
@@ -222,8 +230,24 @@ html[dir="rtl"] .arrow-cta svg { transform: scaleX(-1); }
 /* ============================================================
    HERO (dark, asymmetric, huge display)
    ============================================================ */
-.hero { background: var(--ink); color: var(--paper); }
+.hero { background: var(--ink); color: var(--paper); position: relative; overflow: hidden; }
+/* Faint bioluminescent cell texture, concentrated top corner, fading out */
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(206, 247, 158, 0.16) 1px, transparent 1.6px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 78% 22%, #000, transparent 72%);
+          mask-image: radial-gradient(ellipse 85% 75% at 78% 22%, #000, transparent 72%);
+  opacity: 0.6;
+}
+html[dir="rtl"] .hero::before {
+  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 22% 22%, #000, transparent 72%);
+          mask-image: radial-gradient(ellipse 85% 75% at 22% 22%, #000, transparent 72%);
+}
 .hero-inner {
+  position: relative; z-index: 1;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 90px var(--gutter) 100px;
@@ -431,6 +455,13 @@ html[dir="rtl"] .arrow-cta svg { transform: scaleX(-1); }
 .footer-links { display: flex; gap: 28px; }
 .footer-links a { font-family: var(--font-mono); font-size: 14px; text-transform: uppercase; letter-spacing: -0.02em; color: #9aa3a3; transition: color 0.15s ease; }
 .footer-links a:hover { color: var(--lime); }
+
+/* ============================================================
+   SCROLL REVEAL (restrained fade + slide)
+   ============================================================ */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; transition: none !important; } }
 
 /* ============================================================
    RESPONSIVE

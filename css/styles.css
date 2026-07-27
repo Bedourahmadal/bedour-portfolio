@@ -187,6 +187,25 @@ html[dir="rtl"] .arrow-cta svg { transform: scaleX(-1); }
 .hero-copy { display: flex; flex-direction: column; align-items: center; gap: 24px; }
 .hero-visual { display: none; }
 .hero-top { max-width: 900px; }
+
+/* Hero photo — soft feathered edges blending into the canvas */
+.hero-photo-frame { width: 100%; display: grid; place-items: center; }
+.hero-photo {
+  width: 100%; max-width: 420px;
+  border-radius: 16px;
+  filter: grayscale(0.12) contrast(1.02) saturate(1.03);
+  -webkit-mask-image: radial-gradient(120% 122% at 50% 42%, #000 56%, transparent 100%);
+          mask-image: radial-gradient(120% 122% at 50% 42%, #000 56%, transparent 100%);
+}
+/* When the photo is present, switch the hero to a left-aligned two-column layout */
+.hero.has-photo { text-align: left; }
+.hero.has-photo .hero-inner { display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 48px; }
+.hero.has-photo .hero-copy { align-items: flex-start; }
+.hero.has-photo .hero-top { max-width: 640px; }
+.hero.has-photo .hero-bottom { align-items: flex-start; }
+.hero.has-photo .hero-actions, .hero.has-photo .hero-socials { justify-content: flex-start; }
+.hero.has-photo .hero-visual { display: grid; place-items: center; }
+html[dir="rtl"] .hero.has-photo { text-align: right; }
 .hero .eyebrow { margin-bottom: 16px; display: block; }
 .hero-name {
   font-family: var(--font-serif);
@@ -340,6 +359,12 @@ html[dir="rtl"] .contact-sub { letter-spacing: 0; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 900px) {
+  .hero.has-photo .hero-inner { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+  .hero.has-photo, html[dir="rtl"] .hero.has-photo { text-align: center; }
+  .hero.has-photo .hero-copy, .hero.has-photo .hero-bottom { align-items: center; }
+  .hero.has-photo .hero-actions, .hero.has-photo .hero-socials { justify-content: center; }
+  .hero.has-photo .hero-visual { order: -1; }
+  .hero-photo { max-width: 240px; }
   .work-card, .work-card.reverse { grid-template-columns: 1fr; gap: 20px; }
   .work-card.reverse .work-media { order: 0; }
   .work-card.reverse .work-body { order: 0; }

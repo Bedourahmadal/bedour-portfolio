@@ -177,27 +177,31 @@ html[dir="rtl"] .arrow-cta svg { transform: scaleX(-1); }
 /* ============================================================
    HERO (centered editorial stack + soft violet wash)
    ============================================================ */
-.hero { position: relative; overflow: hidden; background: var(--white); text-align: left; min-height: 86vh; display: flex; align-items: center; }
-.hero::before {
-  content: ""; position: absolute; inset: -24% 0 auto 0; height: 680px; pointer-events: none; z-index: 0;
-  background: radial-gradient(58% 58% at 64% 12%, rgba(255,206,158,0.4), rgba(255,239,224,0.5) 48%, transparent 74%);
-}
-/* Full-bleed hero scene (transparent product shot) — Resend-style, text on the left */
+.hero { position: relative; overflow: hidden; background: #000; text-align: left; min-height: 86vh; display: flex; align-items: center; }
+.hero::before { display: none; }
+/* Full-bleed dark hero scene */
 .hero-bg {
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background: url('../images/hero-bg.webp') no-repeat left center;
-  background-size: min(64%, 880px) auto;
-  opacity: 0.9;
+  background: #000 url('../images/hero-dark.webp') no-repeat center center;
+  background-size: cover;
 }
-html[dir="rtl"] .hero-bg { background-position: right center; }
+/* Readability scrim behind the text (right side) */
+.hero::after {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0) 66%);
+}
+html[dir="rtl"] .hero::after { background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0) 66%); }
 .hero-inner {
   position: relative; z-index: 1;
   width: 100%; max-width: var(--max-width); margin: 0 auto;
   padding: 72px var(--gutter);
   display: flex; justify-content: flex-end;
 }
-.hero-copy { display: flex; flex-direction: column; align-items: flex-end; gap: 18px; max-width: 560px; text-align: right; }
+.hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; max-width: 480px; text-align: left; }
 html[dir="rtl"] .hero-copy { align-items: flex-start; text-align: right; }
+.hero .eyebrow { color: rgba(255,255,255,0.55); }
+.hero .hero-name { color: #fff; }
+.hero .hero-role { color: rgba(255,255,255,0.82); }
 .hero-visual { display: none; }
 .hero-top { max-width: 900px; }
 
@@ -267,7 +271,8 @@ html[dir="rtl"] .hero-name, html[dir="rtl"] .contact h2 { font-family: var(--fon
   transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
 }
 .xr-card:hover { border-color: var(--violet); transform: translateY(-3px); box-shadow: var(--shadow-subtle); }
-.xr-badge { align-self: flex-start; font-family: var(--font-mono); font-size: 13px; font-weight: 500; letter-spacing: 0.04em; color: #fff; background: var(--violet); padding: 3px 12px; border-radius: 9999px; }
+.xr-icon { display: inline-grid; place-items: center; width: 46px; height: 46px; border-radius: 12px; background: var(--lavender); color: var(--violet); margin-bottom: 6px; }
+.xr-icon svg { width: 24px; height: 24px; }
 .xr-card-title { font-size: 18px; font-weight: 500; color: var(--graphite); letter-spacing: -0.01em; }
 .xr-card-desc { font-size: 14px; line-height: 1.5; color: var(--steel); flex: 1 1 auto; }
 .xr-card-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--violet); margin-top: 4px; }
@@ -402,10 +407,10 @@ html[dir="rtl"] .contact-sub { letter-spacing: 0; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 900px) {
-  .hero { min-height: auto; }
-  .hero-bg { background-size: 96% auto; background-position: center bottom; opacity: 0.5; }
-  html[dir="rtl"] .hero-bg { background-position: center bottom; }
-  .hero-inner { padding: 56px var(--gutter) 250px; justify-content: flex-start; }
+  .hero { min-height: 74vh; }
+  .hero-bg { background-size: cover; background-position: center; }
+  .hero::after { background: rgba(0,0,0,0.5); }
+  .hero-inner { padding: 56px var(--gutter); justify-content: flex-start; }
   .hero-copy { max-width: 100%; align-items: flex-start; text-align: left; }
   html[dir="rtl"] .hero-copy { align-items: flex-start; text-align: right; }
   .work-card, .work-card.reverse { grid-template-columns: 1fr; gap: 20px; }
@@ -422,8 +427,8 @@ html[dir="rtl"] .contact-sub { letter-spacing: 0; }
   .nav-links.open { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; position: absolute; top: 60px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--ash); padding: 18px var(--gutter); z-index: 50; }
   .nav-toggle { display: block; }
   .section { padding: 60px 0; }
-  .hero-inner { padding: 44px var(--gutter) 190px; }
-  .hero-bg { background-size: 116% auto; opacity: 0.42; }
+  .hero { min-height: 62vh; }
+  .hero-inner { padding: 44px var(--gutter); }
   .mini-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }

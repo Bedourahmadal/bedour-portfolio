@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <meta name="theme-color" content="#000000" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/styles.css?v=2-dark" />
+<link rel="stylesheet" href="css/styles.css?v=3-layout" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23000000'/><rect x='0.5' y='0.5' width='31' height='31' rx='6.5' fill='none' stroke='%23292d30'/><text x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%239281f7' text-anchor='middle'>B</text></svg>" />
 </head>
 <body>
@@ -43,7 +43,9 @@
 
 <!-- ============ HERO ============ -->
 <header class="hero" id="top">
-  <div class="container">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+    <a class="announce-pill" href="#contact"><span class="dot"></span><span class="lang-en">Available for opportunities</span><span class="lang-ar">متاحة للفرص</span><span class="chev">↗</span></a>
     <p class="eyebrow"><span class="lang-en">XR Developer</span><span class="lang-ar">مطوّرة واقع ممتد</span></p>
     <h1 class="serif-display hero-name">Bedour Ahmad Alayyad</h1>
     <p class="hero-role"><span class="lang-en">AR · VR · MR — Immersive Experiences</span><span class="lang-ar">معزّز · افتراضي · مختلط — تجارب غامرة</span></p>
@@ -66,8 +68,26 @@
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.64h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.75c0-1.37-.03-3.13-1.95-3.13-1.96 0-2.26 1.49-2.26 3.03V21h-4z"/></svg>
       </a>
     </div>
+    </div><!-- /hero-copy -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="cube-scene"><div class="cube">
+        <div class="cube-face front"></div><div class="cube-face back"></div>
+        <div class="cube-face right"></div><div class="cube-face left"></div>
+        <div class="cube-face top"></div><div class="cube-face bottom"></div>
+      </div></div>
+    </div>
   </div>
 </header>
+
+<!-- ============ STACK ============ -->
+<section class="stack-section">
+  <div class="container">
+    <p class="stack-label"><span class="lang-en">Building with</span><span class="lang-ar">أبني باستخدام</span></p>
+    <div class="stack-grid">
+      <span>Unity</span><span>C#</span><span>Meta&nbsp;Quest</span><span>Unity&nbsp;Sentis</span><span>OpenXR</span><span>Vuforia</span><span>Convai</span><span>MediaPipe</span>
+    </div>
+  </div>
+</section>
 
 <!-- ============ ABOUT ============ -->
 <section class="section" id="about">
@@ -76,10 +96,13 @@
       <p class="eyebrow"><span class="lang-en">About</span><span class="lang-ar">نبذة</span></p>
       <h2 class="section-title"><span class="lang-en">About Me</span><span class="lang-ar">نبذة عني</span></h2>
     </div>
-    <div class="about-grid">
-      <p><span class="lang-en">I am an Extended Reality (XR) Developer specializing in Augmented, Virtual, and Mixed Reality with Unity and C#, backed by a strong foundation in computer science and a Master's degree in Artificial Intelligence.</span><span class="lang-ar block">أنا مطوّرة واقع ممتد (XR) متخصّصة في الواقع المعزّز والافتراضي والمختلط باستخدام Unity وC#، بخلفية قوية في علوم الحاسب ودرجة الماجستير في الذكاء الاصطناعي.</span></p>
-      <p><span class="lang-en">Building immersive experiences is what I love most — and I bring AI, computer vision, and spatial computing into them to make interactions smarter and more natural.</span><span class="lang-ar block">أكثر ما أحبه هو بناء التجارب الغامرة — وأدمج فيها الذكاء الاصطناعي ورؤية الحاسب والحوسبة المكانية لجعل التفاعل أذكى وأكثر طبيعية.</span></p>
-      <p><span class="lang-en">My work bridges the physical and digital worlds through XR applications built with AR Foundation, OpenXR, Vuforia, Meta Quest, and Unity Sentis.</span><span class="lang-ar block">يجسر عملي بين العالمين المادي والرقمي عبر تطبيقات واقع ممتد مبنية باستخدام AR Foundation وOpenXR وVuforia وMeta Quest وUnity Sentis.</span></p>
+    <div class="terminal">
+      <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-file">about.md</span></div>
+      <div class="terminal-body">
+        <div class="terminal-line"><span class="prompt">›</span><p><span class="lang-en">I am an Extended Reality (XR) Developer specializing in Augmented, Virtual, and Mixed Reality with Unity and C#, backed by a strong foundation in computer science and a Master's degree in Artificial Intelligence.</span><span class="lang-ar block">أنا مطوّرة واقع ممتد (XR) متخصّصة في الواقع المعزّز والافتراضي والمختلط باستخدام Unity وC#، بخلفية قوية في علوم الحاسب ودرجة الماجستير في الذكاء الاصطناعي.</span></p></div>
+        <div class="terminal-line"><span class="prompt">›</span><p><span class="lang-en">Building immersive experiences is what I love most — and I bring AI, computer vision, and spatial computing into them to make interactions smarter and more natural.</span><span class="lang-ar block">أكثر ما أحبه هو بناء التجارب الغامرة — وأدمج فيها الذكاء الاصطناعي ورؤية الحاسب والحوسبة المكانية لجعل التفاعل أذكى وأكثر طبيعية.</span></p></div>
+        <div class="terminal-line"><span class="prompt">›</span><p><span class="lang-en">My work bridges the physical and digital worlds through XR applications built with AR Foundation, OpenXR, Vuforia, Meta Quest, and Unity Sentis.</span><span class="lang-ar block">يجسر عملي بين العالمين المادي والرقمي عبر تطبيقات واقع ممتد مبنية باستخدام AR Foundation وOpenXR وVuforia وMeta Quest وUnity Sentis.</span></p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -97,6 +120,7 @@
       <!-- Project 1 -->
       <article class="project-card">
         <div class="project-visual">
+          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-file">mineral-intelligence.mp4</span></div>
           <video class="project-media" src="images/mineral.mp4" autoplay muted loop playsinline preload="metadata" onerror="this.style.display='none'"></video>
           <span class="placeholder">AI Mineral Intelligence</span>
         </div>
@@ -130,6 +154,7 @@
       <!-- Project 2 -->
       <article class="project-card reverse">
         <div class="project-visual">
+          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-file">beautymr.mp4</span></div>
           <video class="project-media" src="images/beautymr.mp4" autoplay muted loop playsinline preload="metadata" onerror="this.style.display='none'"></video>
           <span class="placeholder">BeautyMR</span>
         </div>
@@ -158,6 +183,7 @@
       <!-- Project 3 -->
       <article class="project-card">
         <div class="project-visual">
+          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-file">vrlingo.mp4</span></div>
           <video class="project-media" src="images/vrlingo.mp4" autoplay muted loop playsinline preload="metadata" onerror="this.style.display='none'"></video>
           <span class="placeholder">VRlingo</span>
         </div>
@@ -186,6 +212,7 @@
       <!-- Project 4 -->
       <article class="project-card reverse">
         <div class="project-visual">
+          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-file">emergency-training.mp4</span></div>
           <video class="project-media" src="images/emergency.mp4" autoplay muted loop playsinline preload="metadata" onerror="this.style.display='none'"></video>
           <span class="placeholder">Emergency Response Training</span>
         </div>
@@ -349,6 +376,6 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=2-dark"></script>
+<script src="js/main.js?v=3-layout"></script>
 </body>
 </html>

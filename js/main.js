@@ -99,21 +99,22 @@
     revealTargets.forEach(function (el) { el.classList.add('in'); });
   }
 
-  /* ---- Project detail modals ---- */
-  [].slice.call(document.querySelectorAll('.proj-card')).forEach(function (btn) {
+  /* ---- Project category modals ---- */
+  function playAll(dlg) { [].slice.call(dlg.querySelectorAll('video')).forEach(function (v) { try { v.currentTime = 0; var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); } catch (e) {} }); }
+  function pauseAll(dlg) { [].slice.call(dlg.querySelectorAll('video')).forEach(function (v) { try { v.pause(); } catch (e) {} }); }
+  [].slice.call(document.querySelectorAll('[data-modal]')).forEach(function (btn) {
     btn.addEventListener('click', function () {
       var dlg = document.getElementById(btn.getAttribute('data-modal'));
       if (!dlg || !dlg.showModal) return;
       dlg.showModal();
-      var v = dlg.querySelector('video');
-      if (v) { try { v.currentTime = 0; var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); } catch (e) {} }
+      playAll(dlg);
     });
   });
   [].slice.call(document.querySelectorAll('.proj-modal')).forEach(function (dlg) {
-    function closeDlg() { var v = dlg.querySelector('video'); if (v) v.pause(); if (dlg.open) dlg.close(); }
+    function closeDlg() { pauseAll(dlg); if (dlg.open) dlg.close(); }
     var closeBtn = dlg.querySelector('[data-close]');
     if (closeBtn) closeBtn.addEventListener('click', closeDlg);
     dlg.addEventListener('click', function (e) { if (e.target === dlg) closeDlg(); });
-    dlg.addEventListener('cancel', function () { var v = dlg.querySelector('video'); if (v) v.pause(); });
+    dlg.addEventListener('cancel', function () { pauseAll(dlg); });
   });
 })();

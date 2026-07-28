@@ -177,38 +177,42 @@ html[dir="rtl"] .arrow-cta svg { transform: scaleX(-1); }
 /* ============================================================
    HERO (centered editorial stack + soft violet wash)
    ============================================================ */
-.hero { position: relative; overflow: hidden; background: var(--white); text-align: center; min-height: 88vh; display: flex; align-items: center; }
+.hero { position: relative; overflow: hidden; background: var(--white); text-align: left; min-height: 92vh; display: flex; align-items: flex-end; }
 .hero::before { display: none; }
-/* Hero scene fills the full width on desktop (no white sides) */
+/* Full-bleed hero scene */
 .hero-bg {
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background: url('../images/hero-scene.webp') no-repeat center center;
   background-size: cover;
 }
-/* Soft white glow behind the centered text */
+/* Dark gradient at the bottom so the bottom-left text stays readable (INVERSA-style) */
 .hero::after {
   content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background: radial-gradient(52% 42% at 50% 48%, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.72) 45%, rgba(255,255,255,0) 78%);
+  background: linear-gradient(to top, rgba(0,0,0,0.74) 0%, rgba(0,0,0,0.34) 24%, rgba(0,0,0,0) 55%);
 }
 .hero-inner {
   position: relative; z-index: 1;
   width: 100%; max-width: var(--max-width); margin: 0 auto;
-  padding: 72px var(--gutter);
-  display: flex; justify-content: center;
+  padding: 64px var(--gutter) 74px;
+  display: flex; justify-content: flex-start;
 }
-.hero-copy { display: flex; flex-direction: column; align-items: center; gap: 18px; max-width: 620px; text-align: center; }
-/* Animated scroll-down cue */
+.hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; max-width: 640px; text-align: left; }
+html[dir="rtl"] .hero-copy { align-items: flex-start; text-align: right; }
+.hero .eyebrow { color: rgba(255,255,255,0.72); }
+.hero .hero-name { color: #fff; }
+.hero .hero-role { color: rgba(255,255,255,0.92); }
+/* Animated scroll-down cue (bottom-right, over the dark gradient) */
 .hero-scroll {
-  position: absolute; z-index: 2; bottom: 22px; left: 50%; transform: translateX(-50%);
+  position: absolute; z-index: 2; bottom: 26px; right: 28px;
   width: 44px; height: 44px; border-radius: 9999px;
-  border: 1px solid var(--ash); background: rgba(255,255,255,0.82); backdrop-filter: blur(4px);
-  display: grid; place-items: center; color: var(--violet);
-  box-shadow: var(--shadow-ring);
+  border: 1px solid rgba(255,255,255,0.5); background: rgba(255,255,255,0.14); backdrop-filter: blur(4px);
+  display: grid; place-items: center; color: #fff;
   animation: hero-bounce 2s ease-in-out infinite;
 }
+html[dir="rtl"] .hero-scroll { right: auto; left: 28px; }
 .hero-scroll:hover { color: #fff; background: var(--violet); border-color: var(--violet); }
 .hero-scroll svg { width: 20px; height: 20px; }
-@keyframes hero-bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(7px); } }
+@keyframes hero-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(7px); } }
 @media (prefers-reduced-motion: reduce) { .hero-scroll { animation: none; } }
 .hero-visual { display: none; }
 .hero-top { max-width: 900px; }
@@ -481,11 +485,10 @@ html[dir="rtl"] .contact-sub { letter-spacing: 0; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 900px) {
-  .hero { min-height: 70vh; }
-  .hero-bg { width: 100%; background-size: contain; background-position: center; }
-  .hero::after { background: radial-gradient(62% 46% at 50% 50%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 48%, rgba(255,255,255,0) 82%); }
-  .hero-inner { padding: 56px var(--gutter); justify-content: center; }
-  .hero-copy { max-width: 100%; align-items: center; text-align: center; }
+  .hero { min-height: 84vh; }
+  .hero-inner { padding: 56px var(--gutter) 60px; justify-content: flex-start; }
+  .hero-copy { max-width: 100%; align-items: flex-start; text-align: left; }
+  html[dir="rtl"] .hero-copy { text-align: right; }
   .work-card, .work-card.reverse { grid-template-columns: 1fr; gap: 20px; }
   .work-card.reverse .work-media { order: 0; }
   .work-card.reverse .work-body { order: 0; }

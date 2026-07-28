@@ -326,19 +326,41 @@ html[dir="rtl"] .card__category { letter-spacing: 0; }
 }
 @media (max-width: 760px) {
   :root { --gutter: 20px; }
-  /* Keep the scene visible but push it below the copy so nothing overlaps the subject */
-  .hero { min-height: auto; justify-content: flex-start; padding-bottom: 0; }
+  /* Scene stays the hero background; copy sits on a bright band above it */
+  .hero { min-height: 100vh; justify-content: flex-start; }
   .hero__bg {
-    position: relative; inset: auto; z-index: 0; height: auto; max-height: 60vh;
-    object-position: center right; margin-top: 26px; order: 2;
+    position: absolute; inset: 0; z-index: -2;
+    width: 100%; height: 100%; margin: 0;
+    object-fit: cover; object-position: 74% 62%;
   }
-  .hero__inner { order: 1; }
-  .hero__features { order: 3; }
-  .hero::before { display: none; }
+  .hero::before {
+    display: block;
+    background:
+      /* bright band behind the copy, clearing by 58% so the scene shows through */
+      linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.97) 46%, rgba(255,255,255,0.55) 53%, rgba(255,255,255,0) 60%),
+      /* wash under the feature strip only */
+      linear-gradient(0deg, #fff 0%, rgba(255,255,255,0.95) 13%, rgba(255,255,255,0.5) 17%, rgba(255,255,255,0) 22%);
+  }
+  html[dir="rtl"] .hero__bg { object-position: 26% 62%; }
+  html[dir="rtl"] .hero::before {
+    background:
+      linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.97) 46%, rgba(255,255,255,0.55) 53%, rgba(255,255,255,0) 60%),
+      linear-gradient(0deg, #fff 0%, rgba(255,255,255,0.95) 13%, rgba(255,255,255,0.5) 17%, rgba(255,255,255,0) 22%);
+  }
+  /* side-by-side CTAs free up vertical room for the scene */
+  .hero__actions .btn { flex: 1 1 0; min-width: 0; padding-inline: 14px; font-size: 14px; min-height: 48px; }
+  .hero__inner { flex: 0 0 auto; padding-top: 8px; }
+  /* two columns keeps the strip short so the scene stays visible */
+  .hero__features {
+    margin-top: auto; padding-top: clamp(96px, 17vh, 160px);
+    grid-template-columns: repeat(2, 1fr); row-gap: 16px; column-gap: 14px;
+  }
+  .hero__features strong { font-size: 14px; }
+  .hero__features em { font-size: 12px; }
+  .hero__features svg { width: 22px; height: 22px; }
   .hero__copy { max-width: 100%; }
-  .hero__features { grid-template-columns: 1fr; row-gap: 16px; padding-block: 26px; }
-  .hero__features li + li { border-left: 0; padding-inline-start: 0; }
-  html[dir="rtl"] .hero__features li + li { border-right: 0; }
+  .hero__features li:nth-child(odd) { border-left: 0; padding-inline-start: 0; }
+  html[dir="rtl"] .hero__features li:nth-child(odd) { border-right: 0; }
   .nav__toggle { display: flex; }
   .nav__links {
     display: none; position: absolute; top: var(--nav-h); left: 0; right: 0;
@@ -355,10 +377,10 @@ html[dir="rtl"] .card__category { letter-spacing: 0; }
   .expertise { grid-template-columns: 1fr; row-gap: 30px; }
   .expertise__item { padding-inline: 0; border-left: 0; }
   html[dir="rtl"] .expertise__item { border-right: 0; }
-  .hero__actions .btn { flex: 1 1 200px; }
   .contact__link { flex: 1 1 160px; }
   .footer__inner { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 380px) {
-  .hero__actions .btn, .contact__link { flex: 1 1 100%; }
+  .contact__link { flex: 1 1 100%; }
+  .hero__actions .btn { font-size: 13px; padding-inline: 10px; }
 }

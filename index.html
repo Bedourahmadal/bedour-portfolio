@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="preload" as="image" href="images/bedour-xr-hero.webp" fetchpriority="high" />
-<link rel="stylesheet" href="css/styles.css?v=31-redesign" />
+<link rel="stylesheet" href="css/styles.css?v=32-fullbleed" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23ffffff'/><text x='16' y='23' font-family='Inter,sans-serif' font-size='19' font-weight='700' fill='%23F06400' text-anchor='middle'>B</text></svg>" />
 </head>
 <body>
@@ -47,6 +47,11 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="home">
+  <img class="hero__bg"
+       src="images/bedour-xr-hero.webp"
+       alt="An XR developer wearing a headset, interacting with holographic spatial interfaces at a bright minimal desk."
+       width="1920" height="1280" fetchpriority="high" decoding="async" />
+
   <div class="hero__inner">
     <div class="hero__copy">
       <p class="label"><span class="lang-en">XR Developer</span><span class="lang-ar">مطوّرة واقع ممتد</span></p>
@@ -67,12 +72,30 @@
       </div>
     </div>
 
-    <div class="hero__media">
-      <img src="images/bedour-xr-hero.webp"
-           alt="An XR developer wearing a headset, interacting with holographic spatial interfaces at a bright minimal desk."
-           width="1920" height="1280" fetchpriority="high" decoding="async" />
-    </div>
   </div>
+
+  <ul class="hero__features">
+    <li>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6 20.4 7v10L12 21.4 3.6 17V7z"/><path d="M3.6 7 12 11.4 20.4 7M12 11.4v10"/></svg>
+      <span><strong><span class="lang-en">XR Experiences</span><span class="lang-ar">تجارب واقع ممتد</span></strong>
+      <em><span class="lang-en">Immersive &amp; Impactful</span><span class="lang-ar">غامرة ومؤثّرة</span></em></span>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3.4M12 18.6V22M2 12h3.4M18.6 12H22M4.9 4.9l2.4 2.4M16.7 16.7l2.4 2.4M19.1 4.9l-2.4 2.4M7.3 16.7l-2.4 2.4"/></svg>
+      <span><strong><span class="lang-en">AI-Powered</span><span class="lang-ar">مدعومة بالذكاء</span></strong>
+      <em><span class="lang-en">Smarter Interactions</span><span class="lang-ar">تفاعلات أذكى</span></em></span>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 2.5 15 0 18M12 3c-2.5 2.6-2.5 15 0 18"/></svg>
+      <span><strong><span class="lang-en">Real-World Impact</span><span class="lang-ar">أثر واقعي</span></strong>
+      <em><span class="lang-en">Across Industries</span><span class="lang-ar">عبر القطاعات</span></em></span>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg>
+      <span><strong><span class="lang-en">User-Centered</span><span class="lang-ar">متمحورة حول المستخدم</span></strong>
+      <em><span class="lang-en">Designed with Purpose</span><span class="lang-ar">مصمّمة بهدف</span></em></span>
+    </li>
+  </ul>
 </section>
 
 <!-- ============ WHAT I BUILD ============ -->
@@ -268,6 +291,6 @@
   </div>
 </dialog>
 
-<script src="js/main.js?v=31-redesign"></script>
+<script src="js/main.js?v=32-fullbleed"></script>
 </body>
 </html>

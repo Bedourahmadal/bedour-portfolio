@@ -136,7 +136,7 @@ html[dir="rtl"] .i-back { transform: scaleX(-1); }
 /* Full-bleed scene: the image spans the whole hero and melts into the white canvas */
 .hero {
   position: relative; isolation: isolate; overflow: hidden;
-  min-height: min(92vh, 900px);
+  min-height: min(78vh, 760px);
   display: flex; flex-direction: column; justify-content: center;
   padding-top: calc(var(--nav-h) + clamp(20px, 3vw, 40px));
   padding-bottom: clamp(20px, 3vw, 36px);
@@ -179,7 +179,8 @@ html[dir="rtl"] .hero::before {
 .hero__features li + li { border-left: 1px solid var(--border); padding-inline-start: clamp(14px, 2vw, 26px); }
 html[dir="rtl"] .hero__features li + li { border-left: 0; border-right: 1px solid var(--border); }
 .hero__features svg { width: 26px; height: 26px; flex: 0 0 auto; color: var(--accent); }
-.hero__features span { display: flex; flex-direction: column; min-width: 0; }
+/* Only the wrapper span — must not override .lang-en / .lang-ar visibility */
+.hero__features li > span { display: flex; flex-direction: column; min-width: 0; }
 .hero__features strong { font-size: 15px; font-weight: 600; }
 .hero__features em { font-style: normal; font-size: 13px; color: var(--text-secondary); }
 
@@ -307,7 +308,7 @@ html[dir="rtl"] .card__category { letter-spacing: 0; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
-  .hero { min-height: min(86vh, 780px); }
+  .hero { min-height: min(72vh, 660px); }
   .hero__copy { max-width: 62%; }
   .hero__text { max-width: 100%; }
   .hero__features { grid-template-columns: repeat(2, 1fr); row-gap: 18px; }

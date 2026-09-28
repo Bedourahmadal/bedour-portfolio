@@ -17,11 +17,11 @@
     {
       id: 'safesense',
       featured: true,
-      title: { en: 'SafeSense — Autoxtion', ar: 'SafeSense — أوتوكشن' },
+      title: { en: 'Fire Response Training — Autoxtion', ar: 'التدريب على إطفاء الحرائق — Autoxtion' },
       category: { en: 'Mixed Reality · Safety Training · Assessment', ar: 'واقع مختلط · تدريب السلامة · تقييم' },
       description: {
-        en: 'A Mixed Reality safety-competency assessment for Meta Quest 3, built by my company, Autoxtion. A gas-pipeline fire breaks out in the trainee’s real surroundings through passthrough, and they must respond as they would on site — raise the alarm, shut off the fuel, call emergency services, pick the right extinguisher and put the fire out against the clock. SafeSense does not just train: every decision, delay and procedural mistake is scored, and a performance report is sent to the trainee’s supervisor.',
-        ar: 'تقييم لكفاءة السلامة بالواقع المختلط على Meta Quest 3، من تطوير شركتي Autoxtion. يشتعل حريق في خط أنابيب غاز داخل محيط المتدرّب الحقيقي عبر الـ Passthrough، وعليه أن يتصرّف كما لو كان في الموقع: يُطلق الإنذار، ويوقف الوقود، ويتصل بالطوارئ، ويختار الطفاية الصحيحة، ويُطفئ الحريق قبل انتهاء الوقت. SafeSense لا يدرّب فقط، بل يقيس: كل قرار وكل تأخير وكل خطأ إجرائي يُحتسب، ويُرسَل تقرير الأداء إلى مشرف المتدرّب.'
+        en: 'A Mixed Reality safety-competency assessment for Meta Quest 3, built by my company, Autoxtion. A gas-pipeline fire breaks out in the trainee’s real surroundings through passthrough, and they must respond as they would on site — raise the alarm, shut off the fuel, call emergency services, pick the right extinguisher and put the fire out against the clock. It does not just train: every decision, delay and procedural mistake is scored, and a performance report is sent to the trainee’s supervisor.',
+        ar: 'تقييم لكفاءة السلامة بالواقع المختلط على Meta Quest 3، من تطوير شركتي Autoxtion. يشتعل حريق في خط أنابيب غاز داخل محيط المتدرّب الحقيقي عبر الـ Passthrough، وعليه أن يتصرّف كما لو كان في الموقع: يُطلق الإنذار، ويوقف الوقود، ويتصل بالطوارئ، ويختار الطفاية الصحيحة، ويُطفئ الحريق قبل انتهاء الوقت. والتجربة لا تدرّب فقط، بل تقيس: كل قرار وكل تأخير وكل خطأ إجرائي يُحتسب، ويُرسَل تقرير الأداء إلى مشرف المتدرّب.'
       },
       features: {
         en: [

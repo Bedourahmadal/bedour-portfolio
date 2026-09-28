@@ -15,7 +15,7 @@
 
   var PROJECTS = [
     {
-      id: 'safesense',
+      id: 'firetraining',
       featured: true,
       title: { en: 'Fire Response Training — Autoxtion', ar: 'التدريب على إطفاء الحرائق — Autoxtion' },
       category: { en: 'Mixed Reality · Safety Training · Assessment', ar: 'واقع مختلط · تدريب السلامة · تقييم' },
@@ -50,8 +50,8 @@
         ]
       },
       mediaType: 'video',
-      media: 'images/safesense.mp4',
-      poster: 'images/poster-safesense.jpg',
+      media: 'images/fire-training.mp4',
+      poster: 'images/poster-fire-training.jpg',
       technologies: ['Unity 6', 'C#', 'Meta Quest 3', 'Meta XR SDK', 'MR Utility Kit', 'Passthrough', 'OpenXR', 'XR Hands', 'Hand + Controller Tracking', 'QR Code Tracking', 'Particle VFX', 'Google Apps Script']
     },
     {

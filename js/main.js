@@ -15,6 +15,46 @@
 
   var PROJECTS = [
     {
+      id: 'safesense',
+      featured: true,
+      title: { en: 'SafeSense — Autoxtion', ar: 'SafeSense — أوتوكشن' },
+      category: { en: 'Mixed Reality · Safety Training · Assessment', ar: 'واقع مختلط · تدريب السلامة · تقييم' },
+      description: {
+        en: 'A Mixed Reality safety-competency assessment for Meta Quest 3, built by my company, Autoxtion. A gas-pipeline fire breaks out in the trainee’s real surroundings through passthrough, and they must respond as they would on site — raise the alarm, shut off the fuel, call emergency services, pick the right extinguisher and put the fire out against the clock. SafeSense does not just train: every decision, delay and procedural mistake is scored, and a performance report is sent to the trainee’s supervisor.',
+        ar: 'تقييم لكفاءة السلامة بالواقع المختلط على Meta Quest 3، من تطوير شركتي Autoxtion. يشتعل حريق في خط أنابيب غاز داخل محيط المتدرّب الحقيقي عبر الـ Passthrough، وعليه أن يتصرّف كما لو كان في الموقع: يُطلق الإنذار، ويوقف الوقود، ويتصل بالطوارئ، ويختار الطفاية الصحيحة، ويُطفئ الحريق قبل انتهاء الوقت. SafeSense لا يدرّب فقط، بل يقيس: كل قرار وكل تأخير وكل خطأ إجرائي يُحتسب، ويُرسَل تقرير الأداء إلى مشرف المتدرّب.'
+      },
+      features: {
+        en: [
+          'Sign-in by holding up a QR badge — no typing inside the headset',
+          'Mission briefing: scenario, estimated time and the task',
+          'PPE check — helmet, goggles, high-visibility vest, anti-static boots',
+          'Emergency procedure under a countdown: alarm, fuel shut-off, emergency call',
+          'Extinguisher choice by fire class, with an explanation when the choice is wrong',
+          'A real fire extinguisher fitted with Touch controllers — only the powder is virtual',
+          'Hands and controllers tracked at the same time, so first-time users never get stuck',
+          'Weighted scoring, with the performance report emailed to the supervisor automatically',
+          'Full Arabic and English — interface and voice-over',
+          'Run live with visitors at a technology exhibition in Riyadh'
+        ],
+        ar: [
+          'تسجيل الدخول برفع شارة QR — بدون كتابة داخل النظارة',
+          'إحاطة بالمهمة: السيناريو والوقت المقدّر والمطلوب',
+          'التحقق من معدات الوقاية — الخوذة والنظارات والسترة العاكسة والأحذية المضادة للكهرباء الساكنة',
+          'إجراءات الطوارئ تحت العدّ التنازلي: الإنذار، وإيقاف الوقود، والاتصال بالطوارئ',
+          'اختيار الطفاية حسب فئة الحريق، مع شرح عند الاختيار الخاطئ',
+          'طفاية حريق حقيقية مثبّت عليها ذراعا التحكم — البودرة وحدها افتراضية',
+          'تتبّع اليدين وأذرع التحكم في الوقت نفسه، حتى لا يعلق من يجرّب لأول مرة',
+          'تقييم موزون، ويُرسَل تقرير الأداء إلى المشرف تلقائيًا بالبريد',
+          'عربي وإنجليزي بالكامل — الواجهة والتعليق الصوتي',
+          'شُغّل مباشرة مع الزوّار في معرض تقني بالرياض'
+        ]
+      },
+      mediaType: 'video',
+      media: 'images/safesense.mp4',
+      poster: 'images/poster-safesense.jpg',
+      technologies: ['Unity 6', 'C#', 'Meta Quest 3', 'Meta XR SDK', 'MR Utility Kit', 'Passthrough', 'OpenXR', 'XR Hands', 'Hand + Controller Tracking', 'QR Code Tracking', 'Particle VFX', 'Google Apps Script']
+    },
+    {
       id: 'beautymr',
       featured: true,
       title: { en: 'BeautyMR', ar: 'BeautyMR' },
@@ -103,6 +143,39 @@
     }
   ];
 
+  var PRODUCTION = [
+    {
+      id: 'nationalday96',
+      title: { en: 'Saudi National Day 96 — Autoxtion', ar: 'اليوم الوطني 96 — Autoxtion' },
+      category: { en: 'Brand Film · AI Video Production', ar: 'فيلم للعلامة · إنتاج فيديو بالذكاء الاصطناعي' },
+      description: {
+        en: 'A cinematic film for Saudi National Day 96, produced for Autoxtion. Eleven shots carry the story of the Kingdom’s industry from the founding generation to today’s XR training halls, with working hands as the thread from one era to the next. The early generations appear in a black-and-white film look that turns to natural colour as the story moves forward, and every shot carries an Arabic line, cut on the beat of the soundtrack.',
+        ar: 'فيلم سينمائي لليوم الوطني السعودي 96 من إنتاج Autoxtion. إحدى عشرة لقطة تروي قصة صناعة المملكة من جيل التأسيس إلى قاعات التدريب بالواقع الممتد اليوم، والأيدي العاملة هي الخيط الذي يربط كل حقبة بالتي بعدها. تظهر الأجيال الأولى بمظهر فيلم قديم بالأبيض والأسود يتحوّل إلى الألوان الطبيعية مع تقدّم القصة، وتحمل كل لقطة سطرًا عربيًا، والمونتاج على إيقاع الموسيقى.'
+      },
+      features: {
+        en: ['Eleven AI-generated shots from art-directed reference images', 'Old-film grade for the founding generations, natural colour from the welder on', 'Opening words of King Salman and the Crown Prince, then «Ya Biladi Wasli»', 'Arabic on-screen lines in the official National Day typeface package', 'Edit and sound mix assembled in code, frame-accurate to the beat'],
+        ar: ['إحدى عشرة لقطة مولّدة بالذكاء الاصطناعي من صور مرجعية موجّهة فنيًا', 'مظهر الفيلم القديم لأجيال التأسيس، والألوان الطبيعية من لقطة اللحّام وما بعدها', 'افتتاح بكلمات خادم الحرمين الشريفين وسمو ولي العهد، ثم «يا بلادي واصلي»', 'نصوص عربية على الشاشة بخطوط هوية اليوم الوطني الرسمية', 'المونتاج ومزج الصوت مبنيّان بالكود، بدقة الإطار على الإيقاع']
+      },
+      mediaType: 'video',
+      media: 'images/national-day-96.mp4',
+      poster: 'images/poster-national-day-96.jpg',
+      technologies: ['Google Veo 3.1', 'Google Flow', 'FFmpeg', 'Python', 'Colour Grading', 'Sound Design', 'Arabic Typography']
+    },
+    {
+      id: 'autoxtionfilm',
+      title: { en: 'Autoxtion — Company Film', ar: 'Autoxtion — الفيلم التعريفي' },
+      category: { en: 'Brand Film · AI Video Production', ar: 'فيلم للعلامة · إنتاج فيديو بالذكاء الاصطناعي' },
+      description: {
+        en: 'The launch film for Autoxtion, shown on the company website. Technicians wearing Meta Quest headsets work at a fuel station of the future — holographic pump readouts, vehicle diagnostics and telemetry, a technical and compliance office — showing how XR and AI training fits into daily work in the energy and fuel-station sector. Produced in Arabic and English; the Arabic version is shown here.',
+        ar: 'الفيلم التعريفي لشركة Autoxtion المعروض على موقعها. فنيون يرتدون نظارات Meta Quest يعملون في محطة وقود المستقبل — قراءات هولوغرافية للمضخات، وتشخيص المركبات وقياساتها عن بُعد، ومكتب فني وامتثال — ليُظهر كيف يندمج التدريب بالواقع الممتد والذكاء الاصطناعي في العمل اليومي بقطاع الطاقة ومحطات الوقود. أُنتج بنسختين عربية وإنجليزية، والمعروضة هنا النسخة العربية.'
+      },
+      mediaType: 'video',
+      media: 'images/autoxtion-film-ar.mp4',
+      poster: 'images/poster-autoxtion-film.jpg',
+      technologies: ['AI Video Generation', 'Video Editing', 'Motion Graphics', 'Arabic & English']
+    }
+  ];
+
   /* ---------- Helpers ---------- */
   var htmlEl = document.documentElement;
   function esc(s) {
@@ -187,10 +260,10 @@
     contactLinks.innerHTML = items.join('');
   }
 
-  /* ---------- Work grid ---------- */
-  var grid = document.getElementById('workGrid');
-  if (grid) {
-    grid.innerHTML = PROJECTS.map(function (p) {
+  /* ---------- Work + production grids ---------- */
+  function renderGrid(el, list) {
+    if (!el) return;
+    el.innerHTML = list.map(function (p) {
       var media = p.mediaType === 'video'
         ? '<video src="' + esc(p.media) + '" poster="' + esc(p.poster || '') + '" muted loop playsinline preload="none"></video>'
         : '<img src="' + esc(p.media) + '" alt="' + esc(p.title.en) + '" loading="lazy" />';
@@ -208,6 +281,8 @@
       '</article>';
     }).join('');
   }
+  renderGrid(document.getElementById('workGrid'), PROJECTS);
+  renderGrid(document.getElementById('productionGrid'), PRODUCTION);
 
   /* Play a card video only while it is on screen (never all at once) */
   var cardVideos = [].slice.call(document.querySelectorAll('.card__media video'));
@@ -230,7 +305,7 @@
   var modalClose = document.getElementById('modalClose');
 
   function openProject(id) {
-    var p = PROJECTS.filter(function (x) { return x.id === id; })[0];
+    var p = PROJECTS.concat(PRODUCTION).filter(function (x) { return x.id === id; })[0];
     if (!p || !modal || !modal.showModal) return;
 
     var media = p.mediaType === 'video'

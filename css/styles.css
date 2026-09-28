@@ -219,6 +219,10 @@ html[dir="rtl"] .expertise__item:first-child { border-right: 0; }
 html[dir="rtl"] .card__category { letter-spacing: 0; }
 .card__title { display: block; font-size: clamp(20px, 2vw, 26px); font-weight: 700; letter-spacing: -0.02em; margin-top: 10px; }
 .card__desc { display: block; margin-top: 10px; font-size: 15px; color: var(--text-secondary); max-width: 620px; }
+/* Cards show the opening lines; the full write-up lives in the project modal */
+.card__desc > .lang-en, html[dir="rtl"] .card__desc > .lang-ar {
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden;
+}
 .card__more { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 14px; font-weight: 600; color: var(--accent); }
 
 /* ---------- 8. About ---------- */
